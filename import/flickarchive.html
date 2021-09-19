@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Photon Life</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- BootStrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- StyleSheet -->
+<!--    <link rel="stylesheet" href="stylesheet/styles.css">-->
+<!--    <link rel="stylesheet" href="stylesheet/archivestyles.css">-->
+
+    <!--- J Query -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- NAV BAR -->
+
+<style>
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/home">
+            <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
+            <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
+
+        <a class="navbar-brand me-2" href="/home">
+            PHOTONS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link" href="groups">groups</a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link" href="friends">friends</a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
+
+
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="updatestatus">update status</a>-->
+                    <!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Tim">back to photon labs</a>
+                    </li>
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" th:action="@{/logout}" th:method="post" th:href="logout">logout</a>-->
+                    <!--                    </li>-->
+
+                    <!--                    <li class="nav-item">-->
+                    <!--&lt;!&ndash;                         <a&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        class="btn btn-dark px-3 material-icons-outlined"&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        href="myprofile"&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        role="button">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;                             <i class="material-icons" style="font-size:14px;">account_circle</i>&ndash;&gt;-->
+                    <!--&lt;!&ndash;                         </a>&ndash;&gt;-->
+                    <!--                    </li>-->
+
+                    <!-- More links here... -->
+                    <!-- More links here... -->
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <form th:action="@{/logout}" th:method="post">-->
+                    <!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
+                    <!--                        </form>-->
+                    <!--                    </li>-->
+                </ul>
+
+
+
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- END OF NAVBAR     -->
+
+<!-- Media panel -->
+<!--<div class="container d-flex justify-content-center mediacontainer ">-->
+<!--    <img src="img/photonlife.png">-->
+<!--</div>-->
+
+<div class="row">
+    <div class="column">
+        <img src="https://live.staticflickr.com/65535/49453531431_94fbee97b3_h.jpg" alt="Timothy Lefkowitz Portfolio" >
+        <img src="https://live.staticflickr.com/65535/50642556541_0d9959e3dc_b.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/50642595676_f61763dfbe_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/50641796993_3c70dd950c_b.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/50724443672_cd02973a1d_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49452931963_4e951ce817_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="paris.jpg">
+    </div>
+    <div class="column">
+        <img src="https://live.staticflickr.com/65535/49423514947_1c9987eef8_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423294336_5202e7bf38_z.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423244266_3708fe164a_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423227226_9165b79a44_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49422760843_62758895cf_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423330207_73891e948e_h.jpg" alt="Timothy Lefkowitz Portfolio">
+    </div>
+    <div class="column">
+        <img src="https://live.staticflickr.com/65535/49422640128_f1d1a4c167_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423104026_2abf6e1ef4_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49422639633_a9dff5eb1f_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49422639598_ba7548d0dc_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423034796_21bd7b87fc_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423261432_eb77cef887_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49279804481_09c1240d54_h.jpg" alt="Timothy Lefkowitz Portfolio">
+    </div>
+    <div class="column">
+        <img src="https://live.staticflickr.com/65535/49279327133_9a1b730166_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/5287/5228072183_2781e2a3c8_b.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49423219892_d1c8fdd7af_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/65535/49262514792_da589ba296_b.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/7695/28668952962_47a8b8cb1b_h.jpg" alt="Timothy Lefkowitz Portfolio">
+        <img src="https://live.staticflickr.com/5286/5362635841_05c8beb500_h.jpg" alt="Timothy Lefkowitz Portfolio">
+    </div>
+</div>
+
+<style>
+    .example {
+
+    }
+</style>
+
+<script>
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- Scripts --->
+
+<script src="js/js.js"></script>
+
+
+
+<!--Boot Strap -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
