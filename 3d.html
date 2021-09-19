@@ -1,30 +1,68 @@
+<!--
+[][][] Thank you for viewing my capstone project [][][]
+[][][][][][][][][] Please bare with my code [][][][][][]
+[][][][][][][][][] Tue 20th 2:04AM [][][][][][][][][][]
+[][][][][][][][][] Timothy Craig Lefkowitz[][][][][][][]
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Photon Life</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=viewport content="width=375, initial-scale=1">
+    <title>Hi, I'm Tim</title>
 
 
-    <!-- BootStrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--    //favcon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
 
-    <!-- StyleSheet -->
-    <link rel="stylesheet" href="stylesheet/styles.css">
+    <!--      Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!--- J Query -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="stylesheet/3dstyles.css">
+
+    <!--  convert to a stylesheet later -->
+    <style>
+
+        * {
+
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .status{
+            background: linear-gradient(to bottom right, #57e1e0 0%, #c408a5 100%);
+            max-width: 300px;
+        }
+
+        .bodytext{
+            background: linear-gradient(to bottom right, #4a5252 0%, #151315 100%);
+            max-width: 300px;
+        }
+
+        /*iphone x media query*/
+        @media only screen and (min-width: 375px) and (max-width: 767px) { /* Your Styles... */ }
+
+
+    </style>
+
+    <!--    //favcon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
+
 </head>
-<body>
+
+
+
+<!--<body style="background: linear-gradient(to left, #00AAFF, #00FF6c)";>-->
+
+
 
 <!-- Navbar -->
 <nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -81,7 +119,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="3d.html">3d realms</a>
+                    <a class="nav-link" href="3d.html">3d creations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="flickarchive.html">photographs</a>
@@ -132,83 +170,115 @@
 </nav>
 <!-- END OF NAVBAR     -->
 
-<!--&lt;!&ndash; Media panel &ndash;&gt;-->
-<!--<div class="container d-flex justify-content-center mediacontainer ">-->
-<!--    <img src="img/photonlife.png">-->
-<!--</div>-->
+
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+
+    </nav>
+</div>
 
 
 
 
-<!--- Scripts --->
 
-<script src="js/js.js"></script>
+<style>
+    a:link {
+        color:#dcdcdc;
+    }
+
+    /* visited link */
+    a:visited {
+        color: #00b1ae;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #00b1ae;
+    }
+
+    /* selected link */
+    a:active {
+        color:#dcdcdc;
+    }
+</style>
 
 
-<!--<div class="row">-->
-<!--        <div class="column">-->
-<!--        <img src="https://live.staticflickr.com/65535/49453531431_94fbee97b3_h.jpg">-->
-<!--        <img src="https://live.staticflickr.com/65535/50642556541_0d9959e3dc_b.jpg">-->
-<!--        <img src="https://live.staticflickr.com/65535/50642595676_f61763dfbe_h.jpg">-->
-<!--        <img src="https://live.staticflickr.com/65535/50641796993_3c70dd950c_b.jpg">-->
-<!--        <img src="https://live.staticflickr.com/65535/50724443672_cd02973a1d_h.jpg">-->
-<!--        <img src="https://live.staticflickr.com/65535/49452931963_4e951ce817_h.jpg">-->
-<!--        </div>-->
-<!--</div>-->
 
-<!-- Gallery -->
-<div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-        <img
-                src="https://live.staticflickr.com/65535/51145425173_6479489f76_b.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
+<!--      USERS POSTS DIV   -->
+<div id="mainforpost" class="col-lg-12" style="align-items: center; align-content: center; padding-top: 3%; padding-right: 17%; padding-left: 17%">
 
-        <img
-                src="https://live.staticflickr.com/65535/51146319115_89d52deaf2_o.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
-    </div>
+    <!--              UserPost        style="max-height: 400px;      -->
+    <div class="container userPost" style="height:100%">
+        <!--          Start of posting div-->
+        <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
 
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-                src="https://live.staticflickr.com/65535/51145425188_bd40ebb46a_b.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
-        <img
-                src="https://live.staticflickr.com/65535/51144535882_ba55f94122_b.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
-    </div>
 
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-                src="https://live.staticflickr.com/65535/51145435563_10ac566895_o.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
 
-        <img
-                src="https://live.staticflickr.com/65535/51145435213_801c691763_o.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt=""
-        />
+
+<!--            <h4 style="align-items: left; color:#009694" text="Fixing the MoneyCat">Fixing the Japenses Maneki-neko (MoneyCat)</h4>-->
+            <img src="img/bridge.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
+            <p style="align-items: center">A bridge asset</p>
+
+            <img src="https://live.staticflickr.com/65535/51145425173_6479489f76_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">An Experiment with lighting and Sand</p>
+
+            <img src="img/shipInHangar.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
+            <p style="align-items: center">spaceship hanger</p>
+
+            <img src="https://live.staticflickr.com/65535/51146319115_89d52deaf2_o.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Towers, inspiration from Genshin Impact</p>
+
+            <img src="https://live.staticflickr.com/65535/51145425188_bd40ebb46a_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Enviormental experiementals</p>
+
+            <img src="https://live.staticflickr.com/65535/51144535882_ba55f94122_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Architectural Experiments - Game Asset</p>
+
+            <img src="https://live.staticflickr.com/65535/51145435563_10ac566895_o.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Architectural Experiments - Game Asset</p>
+
+
+
+
+
+
+<!--            <p>I found this Maneki at my local Chinese resturant. When I asked about it we realized this Maneki-neko was broken! This brought a smile to my face and I had to take her home to get fixed.</p>-->
+<!--            <img src="img/cat.jpg" style="width: 85vh; padding-bottom: 2%">-->
+<!--            <img src="img/cat1.jpg" style="width: 85vh; padding-bottom: 2%">-->
+<!--            <p>After opening her up I was amazed at the simplicity. She is almost designed like a clock or what a clock looks like before a clock was a clock, the coil was cut! carefully unwinding a bit of the coil and soldering it back brought her back to life! These make the perfect beginner project to electronics, which makes the perfect beginners project.</p>-->
+
+            <!--                    <img th:src="${usersPost.getOwnerUser().originalavatar}" style="height: 20px; width: 20px;">-->
+
+            <!--      <a th:href="'/i/' + ${usersPost.getOwner().username}">-->
+            <!--      <a style="font-family:lato"><b>Timothy Lefkowitz</b>-->
+            <!--        <img src="img/cat2.jpg" style="height: 32px; width: 32px;">-->
+<!--            <h6 style="align-items: center" text=""></h6></a>-->
+        </div>
+
+
+
+
     </div>
 </div>
-<!-- Gallery -->
 
 
 
-<!--Boot Strap -->
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
+
+<!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
