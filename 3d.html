@@ -26,9 +26,8 @@
 </head>
 <body>
 
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
     <!-- Container wrapper -->
     <div class="container">
         <!-- Navbar brand -->
@@ -37,37 +36,69 @@
             <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
         </a>
 
-        <a class="navbar-brand me-2" href="/home">
-            PHOTONS
+        <a class="navbar-brand me-2" href="/home.html">
+            PHOTONs
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Toggle button -->
+        <!--        <button-->
+        <!--                class="navbar-toggler"-->
+        <!--                type="button"-->
+        <!--                data-mdb-toggle="collapse"-->
+        <!--                data-mdb-target="#navbarButtonsExample"-->
+        <!--                aria-controls="navbarButtonsExample"-->
+        <!--                aria-expanded="false"-->
+        <!--                aria-label="Toggle navigation"-->
+        <!--        >-->
+        <!--            <i class="fas fa-bars"></i>-->
+        <!--        </button>-->
+        <style>
+            .dropdown-item  {
+                background-color: #646161;
+                hover: #00b1ae;
+            }
+        </style>
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left links -->
-<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="groups">groups</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="friends">friends</a>-->
-<!--                </li>-->
-<!--            </ul>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">code</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="calc.html">My Calculator</a>
+                        <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
+                        <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
+                        <a class="dropdown-item" href="konami.html">Konami Code</a>
+                        <a class="dropdown-item" href="weathermap.html">Weather Map</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <!--                        <a class="dropdown-item" href="#three">three</a>-->
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="3d.html">3d creations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="flickarchive.html">photographs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutme.html">about me</a>
+                </li>
+            </ul>
 
 
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link" href="updatestatus">update status</a>-->
-<!--                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Tim">back to photon labs</a>
-                    </li>
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="post">post</a>-->
+                    <!--                    </li>-->
                     <!--                    <li class="nav-item">-->
                     <!--                        <a class="nav-link" th:action="@{/logout}" th:method="post" th:href="logout">logout</a>-->
                     <!--                    </li>-->
@@ -84,11 +115,11 @@
 
                     <!-- More links here... -->
                     <!-- More links here... -->
-<!--                    <li class="nav-item">-->
-<!--                        <form th:action="@{/logout}" th:method="post">-->
-<!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
-<!--                        </form>-->
-<!--                    </li>-->
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <form th:action="@{/logout}" th:method="post">-->
+                    <!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
+                    <!--                        </form>-->
+                    <!--                    </li>-->
                 </ul>
 
 
