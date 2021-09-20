@@ -38,12 +38,12 @@
 /*}*/
 
 .boxes{
-    margin-top:10%;
+    /*margin-top:10%;*/
     justify-content: center;
 }
 
 #carouselExampleControls{
-    height:200px !important;
+    /*height:200px !important;*/
 }
 
 #demo{
