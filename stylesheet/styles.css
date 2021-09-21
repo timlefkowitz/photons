@@ -62,13 +62,13 @@ div {
 }
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
-    padding-top:65px;
+    /*padding-top:65px;*/
 }
 
 .mediacontainer img{
     display: inline-block;
     max-width: 100%;
-    max-height: 300px !important;
+    /*max-height: 300px !important;*/
     /*border: 5px solid red;*/
 }
 
