@@ -402,7 +402,9 @@
 
 <!--## clock-->
 <script>
+    console.log("start")
     function startTime(){
+        console.log("startTime")
         const today = new Date();
         let h = today.getHours();
         let m = today.getMinutes();
@@ -412,7 +414,9 @@
         document.getElementById('clock').innerText = h+":"+m+":"+s;
         setTimeout(startTime,1000);
     }
+    startTime()
     function checkTime(i){
+        console.log("checktime")
         if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
         return i;
     }
