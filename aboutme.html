@@ -127,6 +127,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="aboutme.html">about me</a>
                 </li>
+                <li>
+                    <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
+                </li>
             </ul>
 
 
@@ -306,6 +309,33 @@
 <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                ## clock-->
+<script>
+    function startTime(){
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerText = h+":"+m+":"+s;
+        setTimeout(startTime,1000);
+    }
+    startTime();
+    function checkTime(i){
+        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
+        return i;
+    }
+
+
+</script>
+</div>
 <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
