@@ -34,131 +34,151 @@
 
 
 </head>
-<body>
-<!-- NAV BAR -->
-
-<!-- Navbar -->
-<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
-    <!-- Container wrapper -->
-    <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="home.html">
-            <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
-            <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-        </a>
-
-        <a class="navbar-brand me-2" href="home.html">
-            PHOTONs
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <style>
-            .dropdown-item  {
-                background-color: #646161;
-                hover: #00b1ae;
-            }
-        </style>
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">code</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="calc.html">My Calculator</a>
-                        <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
-                        <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
-                        <a class="dropdown-item" href="konami.html">Konami Code</a>
-                        <a class="dropdown-item" href="weathermap.html">Weather Map</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <!--                        <a class="dropdown-item" href="#three">three</a>-->
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="3d.html">3d creations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="flickarchive.html">photographs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutme.html">about me</a>
-                </li>
-                <li>
-                    <a class="nav-item" id="clock">01:20am</a>
-                </li>
-            </ul>
 
 
-            <!-- Left links -->
+    <style>
+        .row{
+            flex-wrap: nowrap;
+        }
+        #map{
+            display: flex;
+            justify-content: center;
+            width:100%;
+            height:400px;
 
-            <div class="d-flex align-items-center">
+        }
+        .map {
+            display: flex;
+            justify-content: center;
+            padding-top:1em;
+
+        }
+        .days {
+            padding-top:2em;
+            width:80%;
+        }
+    </style>
+
+
+<body onload="startTime()">
+
+    <!-- Navbar -->
+    <nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="home.html">
+                <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
+                <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
+            </a>
+
+            <a class="navbar-brand me-2" href="home.html">
+                PHOTONs
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <style>
+                .dropdown-item  {
+                    background-color: #646161;
+                    hover: #00b1ae;
+                }
+            </style>
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">code</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="calc.html">My Calculator</a>
+                            <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
+                            <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
+                            <a class="dropdown-item" href="konami.html">Konami Code</a>
+                            <a class="dropdown-item" href="weathermap.html">Weather Map</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <!--                        <a class="dropdown-item" href="#three">three</a>-->
+                        </div>
+                    </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html" style="color:#00b1ae">blog</a>
+                        <a class="nav-link" href="3d.html">3d creations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="flickarchive.html">photographs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">about me</a>
                     </li>
                 </ul>
 
 
+                <!-- Left links -->
 
-            </div>
-        </div>
-        <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-</nav>
-<!-- END OF NAVBAR     -->
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" style="color:#00b1ae">blog</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
+                        </li>
+                    </ul>
 
-
-<div class="container">
-    <div class="row justify-content-around">
-
-            <div class="card" style="width: 10rem;">
-                <div class="card-header">
-                    <a class="day1 text-center day1" id="dayOneDT">10-16-1988</a>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item dayonecity">Description:</li>
-                    <li class="list-group-item dayonepressure">Pressure:</li>
-                    <li class="list-group-item dayonetemp">Humidity:</li>
-                    <li class="list-group-item dayonewind">Wind:</li>
-                </ul>
             </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR     -->
+
+
+        <div class="container">
+            <div class="row justify-content-around">
+
+                    <div class="card" style="width: 10rem;">
+                        <div class="card-header">
+                            <a class="day1 text-center day1" id="dayOneDT">10-16-1988</a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item dayonecity">Description:</li>
+                            <li class="list-group-item dayonepressure">Pressure:</li>
+                            <li class="list-group-item dayonetemp">Humidity:</li>
+                            <li class="list-group-item dayonewind">Wind:</li>
+                        </ul>
+                    </div>
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-header">
+                                <a class="day1 text-center day1" id="dayTwoDT">10-16-1988</a>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item daytwocity">Description:</li>
+                                <li class="list-group-item daytwopressure">Pressure:</li>
+                                <li class="list-group-item daytwotemp">Humidity:</li>
+                                <li class="list-group-item daytwowind">Wind:</li>
+                            </ul>
+                        </div>
+
                 <div class="card" style="width: 10rem;">
                     <div class="card-header">
-                        <a class="day1 text-center day1" id="dayTwoDT">10-16-1988</a>
+                        <a class="day1 text-center day1" id="daythreeDT">10-16-1988</a>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item daytwocity">Description:</li>
-                        <li class="list-group-item daytwopressure">Pressure:</li>
-                        <li class="list-group-item daytwotemp">Humidity:</li>
-                        <li class="list-group-item daytwowind">Wind:</li>
+                        <li class="list-group-item daythreecity">Description:</li>
+                        <li class="list-group-item daythreepressure">Pressure:</li>
+                        <li class="list-group-item daythreetemp">Humidity:</li>
+                        <li class="list-group-item daythreewind">Wind:</li>
                     </ul>
                 </div>
-
-        <div class="card" style="width: 10rem;">
-            <div class="card-header">
-                <a class="day1 text-center day1" id="daythreeDT">10-16-1988</a>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item daythreecity">Description:</li>
-                <li class="list-group-item daythreepressure">Pressure:</li>
-                <li class="list-group-item daythreetemp">Humidity:</li>
-                <li class="list-group-item daythreewind">Wind:</li>
-            </ul>
         </div>
-</div>
 
-
-
-
-<div class="map">
-    <div id='map'></div>
-</div>
-
+        <div class="map">
+            <div id='map'></div>
+        </div>
+    </div>
 
 <!--<h5>Tips</h5>-->
 <!--<ul>-->
@@ -172,29 +192,9 @@
 <!--</ul>-->
 
 
-    <style>
-    .row{
-        flex-wrap: nowrap;
-    }
-    #map{
-        display: flex;
-        justify-content: center;
-        width:100%;
-        height:400px;
-
-    }
-    .map {
-        display: flex;
-        justify-content: center;
-        padding-top:1em;
-
-    }
-    .days {
-        padding-top:2em;
-        width:80%;
-    }
-</style>
-
+    <!--########################################################################################################################-->
+    <!--############################                        SCRIPTS                                           ##################-->
+    <!--########################################################################################################################-->
 
     <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -205,25 +205,25 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src="js/keys.js"></script>
+
+    <!--- Scripts --->
+
+    <script src="js/js.js"></script>
 
 
-<!--- Scripts --->
 
-<script src="js/js.js"></script>
-
+    <!--Boot Strap -->
 
 
-<!--Boot Strap -->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    <!--- MapBox CDN --->
 
 
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
-<!--- MapBox CDN --->
 
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<script src="js/mapbox-geocoder-utils.js"></script>
-<script src="js/keys.js"></script>
 
 
 <script>
@@ -342,6 +342,20 @@
 
     ## clock
     <script>
+        function startTime(){
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerText = h+":"+m+":"+s;
+            setTimeout(startTime,1000);
+        }
+        function checkTime(i){
+            if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
+            return i;
+        }
 
     </script>
 
