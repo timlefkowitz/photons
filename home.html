@@ -107,9 +107,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Development Projects</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="">The Photon Foundation [project on hold]</a>
-                        <a class="dropdown-item" href="">PhotonMag [project on hold]</a>
-                        <a class="dropdown-item" href="">Help-Tank [project on hold]</a>
+                        <a class="dropdown-item" href="">The Photon Foundation [comeback soon]</a>
+                        <a class="dropdown-item" href="">PhotonMag [comeback soon]</a>
+                        <a class="dropdown-item" href="">Help-Tank [comeback soon]</a>
+                        <a class="dropdown-item" href="">CrushedMonkey [comeback soon]</a>
                         <a class="dropdown-item" href="calc.html">My Calculator</a>
                         <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
                         <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
@@ -331,134 +332,156 @@
         line-height: 1.5;
         margin-bottom: 1.25rem;
     }
+    #header {
+        background-image: url("https://live.staticflickr.com/65535/51167437242_88c2704e62_h.jpg");
+    }
 
 
 </style>
 
 <body>
-<main>
 
-    <section>
+<div id="header" style="height:40vh; width:100%; align-content: center; text-align: center">
+<h6 style="padding-top:5%; color:#575741"><b>Photon Labs</b></h6>
+    <a>a computer science journal</a>
 
-        <!--      Custom Posting DIV   -->
-        <div id="mainforpost" class="col-lg-12" >
-            <!--              UserPost        style="max-height: 400px;      -->
-            <div class="container userPost" style="height:100%">
-                <!--          Start of posting div-->
-                <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-                    <div id="profileItems" style="margin-top:10vh">
+</div>
 
 
-                        <!--          Avatar and Add to Contacts Buttons-->
-                        <div style="margin-bottom:1.8vh">
-                            <a href="javascript:;" class="avatar rounded-circle">
-                                <img class="avatar" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" style="height: 20vh; width: 20vh;">
-                            </a>
-                            <h1>Timothy Lefkowitz</h1>
-                            <a style="color:#737373;"> developer / artist / geek </a><p></p>
-                            <!--                    <a style="color:#737373;" href="/">photonlabs.xyz</a><br>-->
-                            <!--                    <a style="color:#737373;" href="Tim/contact">resume / cv</a>-->
+
+                <section>
+                    <!--      Custom Posting DIV   -->
+                    <div id="mainforpost" class="col-lg-12" >
+                        <!--              UserPost        style="max-height: 400px;      -->
+                        <div class="container userPost" style="height:100%">
+                            <!--          Start of posting div-->
+                            <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
+                                <div id="profileItems" style="margin-top:10vh">
+
+
+                                    <!--          Avatar and Add to Contacts Buttons-->
+                                    <div style="margin-bottom:1.8vh">
+                                        <a href="javascript:;" class="avatar rounded-circle">
+                                            <img class="avatar" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" style="height: 20vh; width: 20vh;">
+                                        </a>
+                                        <h1>Timothy Lefkowitz</h1>
+                                        <a style="color:#737373;"> developer / artist  </a><p></p>
+                                        <!--                    <a style="color:#737373;" href="/">photonlabs.xyz</a><br>-->
+                                        <!--                    <a style="color:#737373;" href="Tim/contact">resume / cv</a>-->
+                                    </div>
+                                    <ul class="cards">
+                                        <li class="cards__item">
+                                            <div class="card">
+                                                <div class="card__image card__image--river"></div>
+                                                <div class="card__content">
+                                                    <div class="card__title"><b>Photonlabs - Social Media Platform</b></div>
+                                                    <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
+                                                        This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
+                                                    <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn--block card__btn">code</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="cards__item">
+                                            <div class="card">
+                                                <div class="card__image card__image--river"></div>
+                                                <div class="card__content">
+                                                    <div class="card__title"><b>Photonlabs - Calculator</b></div>
+                                                    <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
+                                                        This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
+                                                    <a class="btn btn--block card__btn" href="calc.html">Calculate</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="cards__item">
+                                            <div class="card">
+                                                <div class="card__image card__image--river"></div>
+                                                <div class="card__content">
+                                                    <div class="card__title"><b>My Weather Map</b></div>
+                                                    <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>
+                                                    <a class="btn btn--block card__btn" href="weathermap.html">Weather Map</a>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card__image card__image--river"></div>
+                                                <div class="card__content">
+                                                    <div class="card__title"><b>Photographic Archive</b></div>
+                                                    <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>
+                                                    <a class="btn btn--block card__btn" href="flickarchive.html">photographic archive</a>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card__image card__image--river"></div>
+                                                <div class="card__content">
+                                                    <div class="card__title"><b>Game and Environmental</b></div>
+                                                    <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
+                                                    <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-
-
-
-                        <ul class="cards">
-                            <li class="cards__item">
-                                <div class="card">
-                                    <div class="card__image card__image--river"></div>
-                                    <div class="card__content">
-                                        <div class="card__title"><b>Photonlabs - Social Media Platform</b></div>
-                                        <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                            This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                        <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn--block card__btn">code</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cards__item">
-                                <div class="card">
-                                    <div class="card__image card__image--river"></div>
-                                    <div class="card__content">
-                                        <div class="card__title"><b>Photonlabs - Calculator</b></div>
-                                        <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                            This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                        <a class="btn btn--block card__btn" href="calc.html">Calculate</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cards__item">
-                                <div class="card">
-                                    <div class="card__image card__image--river"></div>
-                                    <div class="card__content">
-                                        <div class="card__title"><b>My Weather Map</b></div>
-                                        <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>
-                                        <a class="btn btn--block card__btn" href="weathermap.html">Weather Map</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card__image card__image--river"></div>
-                                    <div class="card__content">
-                                        <div class="card__title"><b>Photographic Archive</b></div>
-                                        <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>
-                                        <a class="btn btn--block card__btn" href="flickarchive.html">photographic archive</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card__image card__image--river"></div>
-                                    <div class="card__content">
-                                        <div class="card__title"><b>Game and Environmental</b></div>
-                                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
-                                        <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-
-
-
-                        <!--              <a>I'm always working on some complicated things, Some of my ideas include: encrypting every post, giving it a key and letting that key only exist once. A new post then becomes a token </a>-->
-                        <!--              <p>You could export your token to a usb or maybe even etherum or dogecoin!! this is the idea. For now I'm happy learning how database structors work and how to grab the data i want.</p>-->
-
-                        <!--              <p>Thank you for reading, and viewing my very proud project! Thank you to Codeup and Thank you to my family <3</p>-->
-
-
-
-                        <!--            <div>-->
-                        <!--              <a style="font-size: 12px">username</a></s>-->
-                        <!--              <h6 style="align-items: center" th:text="${user.username}"></h6>-->
-
-
-                        <!--&lt;!&ndash;              Status &ndash;&gt;-->
-                        <!--        <div>-->
-                        <!--          <a style="font-size: 12px">status</a>-->
-                        <!--            <h4 style="align-items: center" th:text="${user.status}"></h4>-->
-                        <!--        </div>-->
-
-                        <!--&lt;!&ndash;              Friends &ndash;&gt;-->
-
-
-
-                        <!--&lt;!&ndash;              Featured Post  &ndash;&gt;-->
-                        <!--        <div>-->
-                        <!--          <a style="font-size: 12px">featuredPost</a>-->
-                        <!--&lt;!&ndash;          <img th:src="${usersPost.imgPath}" style="width: 85vh;">&ndash;&gt;-->
-                        <!--&lt;!&ndash;          <h4 style="align-items: center" th:text="${usersPost.title}"></h4>&ndash;&gt;-->
-                        <!--&lt;!&ndash;          <p style="align-items: center" th:text="${usersPost.body}"></p>&ndash;&gt;-->
-
-                        <!--          </div>-->
-
-                        <!--        </div>-->
-
-
-                        <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-                        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
-
-                        <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
-                        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-
-
                     </div>
-    </section>
+
+
+
+
+                    <!--              <a>I'm always working on some complicated things, Some of my ideas include: encrypting every post, giving it a key and letting that key only exist once. A new post then becomes a token </a>-->
+                    <!--              <p>You could export your token to a usb or maybe even etherum or dogecoin!! this is the idea. For now I'm happy learning how database structors work and how to grab the data i want.</p>-->
+
+                    <!--              <p>Thank you for reading, and viewing my very proud project! Thank you to Codeup and Thank you to my family <3</p>-->
+
+
+
+                    <!--            <div>-->
+                    <!--              <a style="font-size: 12px">username</a></s>-->
+                    <!--              <h6 style="align-items: center" th:text="${user.username}"></h6>-->
+
+
+                    <!--&lt;!&ndash;              Status &ndash;&gt;-->
+                    <!--        <div>-->
+                    <!--          <a style="font-size: 12px">status</a>-->
+                    <!--            <h4 style="align-items: center" th:text="${user.status}"></h4>-->
+                    <!--        </div>-->
+
+                    <!--&lt;!&ndash;              Friends &ndash;&gt;-->
+
+
+
+                    <!--&lt;!&ndash;              Featured Post  &ndash;&gt;-->
+                    <!--        <div>-->
+                    <!--          <a style="font-size: 12px">featuredPost</a>-->
+                    <!--&lt;!&ndash;          <img th:src="${usersPost.imgPath}" style="width: 85vh;">&ndash;&gt;-->
+                    <!--&lt;!&ndash;          <h4 style="align-items: center" th:text="${usersPost.title}"></h4>&ndash;&gt;-->
+                    <!--&lt;!&ndash;          <p style="align-items: center" th:text="${usersPost.body}"></p>&ndash;&gt;-->
+
+                    <!--          </div>-->
+
+                    <!--        </div>-->
+
+
+                    <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+                    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+                    <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
+                    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+
+                </section>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card__image card__image--river"></div>
+                    <div class="card__content">
+                        <div class="card__title"><b>Game and Environmental</b></div>
+                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
+                        <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </main>
