@@ -60,10 +60,6 @@
 
 
 
-<!--<body style="background: linear-gradient(to left, #00AAFF, #00FF6c)";>-->
-
-
-
 <!-- Navbar -->
 <nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
   <!-- Container wrapper -->
@@ -134,30 +130,10 @@
 
       <div class="d-flex align-items-center">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!--                    <li class="nav-item">-->
-          <!--                        <a class="nav-link" href="post">post</a>-->
-          <!--                    </li>-->
-          <!--                    <li class="nav-item">-->
-          <!--                        <a class="nav-link" th:action="@{/logout}" th:method="post" th:href="logout">logout</a>-->
-          <!--                    </li>-->
+          <li>
+            <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
+          </li>
 
-          <!--                    <li class="nav-item">-->
-          <!--&lt;!&ndash;                         <a&ndash;&gt;-->
-          <!--&lt;!&ndash;                        class="btn btn-dark px-3 material-icons-outlined"&ndash;&gt;-->
-          <!--&lt;!&ndash;                        href="myprofile"&ndash;&gt;-->
-          <!--&lt;!&ndash;                        role="button">&ndash;&gt;-->
-
-          <!--&lt;!&ndash;                             <i class="material-icons" style="font-size:14px;">account_circle</i>&ndash;&gt;-->
-          <!--&lt;!&ndash;                         </a>&ndash;&gt;-->
-          <!--                    </li>-->
-
-          <!-- More links here... -->
-          <!-- More links here... -->
-          <!--                    <li class="nav-item">-->
-          <!--                        <form th:action="@{/logout}" th:method="post">-->
-          <!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
-          <!--                        </form>-->
-          <!--                    </li>-->
         </ul>
 
 
@@ -202,6 +178,21 @@
   a:active {
     color:#dcdcdc;
   }
+
+
+  .p-page-title {
+    font-family: "Heroic",Arial Narrow,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .05em;
+    line-height: normal;
+    text-transform: uppercase;
+    border-bottom: 5px solid;
+    border-color: #EFEFF0;
+    margin: 16px 0;
+    padding-bottom: 8px;
+    text-align: center;
+  }
 </style>
 
 
@@ -212,50 +203,50 @@
   <!--              UserPost        style="max-height: 400px;      -->
   <div class="container userPost" style="height:100%">
     <!--          Start of posting div-->
-    <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: left">
+    <div class="row postingDiv">
 
 
 <!--      <h4 style="align-items: left; color:#009694" text="title"></h4>-->
 <!--      <img src="img/cat2.jpg" style="width: 95vh; padding-bottom: 2%">-->
 
+      <h1 class="p-page-title ">BLOG</h1>
 
 
-      <h4 style="align-items: left; color:#009694" text="Fixing the MoneyCat">Fixing the Japenses Maneki-neko (MoneyCat)</h4>
-      <img src="img/cat2.jpg" style="width: 95vh; padding-bottom: 2%">
-      <p style="align-items: center">The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.</p>
-      <p>I found this Maneki at my local Chinese resturant. When I asked about it we realized this Maneki-neko was broken! This brought a smile to my face and I had to take her home to get fixed.</p>
-      <img src="img/cat.jpg" style="width: 85vh; padding-bottom: 2%">
-      <img src="img/cat1.jpg" style="width: 85vh; padding-bottom: 2%">
-      <p>After opening her up I was amazed at the simplicity. She is almost designed like a clock or what a clock looks like before a clock was a clock, the coil was cut! carefully unwinding a bit of the coil and soldering it back brought her back to life! These make the perfect beginner project to electronics, which makes the perfect beginners project.</p>
-
-      <!--                    <img th:src="${usersPost.getOwnerUser().originalavatar}" style="height: 20px; width: 20px;">-->
-
-      <!--      <a th:href="'/i/' + ${usersPost.getOwner().username}">-->
-      <!--      <a style="font-family:lato"><b>Timothy Lefkowitz</b>-->
-      <!--        <img src="img/cat2.jpg" style="height: 32px; width: 32px;">-->
-      <h6 style="align-items: center" text=""></h6></a>
     </div>
+      <div style="display: flex; justify-content: left; align-items: left; text-align: left">
+          <a href="moneyCat.html">
+<!--          <img src="https://live.staticflickr.com/65535/51500140107_7cc2e2beee_b.jpg" style="width: 35vh; padding-bottom: 2%">-->
+          <h4 style="color:#ff6400" text="Fixing the MoneyCat">Fixing the Japenses Maneki-neko (MoneyCat)</h4></a>
+          <p style="align-items: center">The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.
+            </p>
+          <h6 style="align-items: center" text=""></h6>
+          </a>
+
+      </div>
 
 
-
+    <h1 class="p-page-title"></h1>
 
   </div>
+  <div style="display: flex; justify-content: left; text-align: left">
+    <a href="blendertutorial.html">
+    <h4 style="color:#ff6400" text="Fixing the MoneyCat">A Greek Column in Blender, Tips to get you started and Why I love Blender so much</h4></a>
+    <p style="align-items: center">Here are a couple of tips and how to make a pillar in blender
+    </p>
+    </a>
+
+  </div>
+
+  <h1 class="p-page-title"></h1>
+
+
+    </div>
+<!--  mainforpost-->
+  </div>
+
+
 </div>
 
-
-
-
-
-
-<!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!--## clock-->
 <script>
@@ -269,12 +260,27 @@
     document.getElementById('clock').innerText = h+":"+m+":"+s;
     setTimeout(startTime,1000);
   }
+  startTime()
   function checkTime(i){
     if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
     return i;
   }
 
 </script>
+
+
+
+<!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 
 
 </body>
