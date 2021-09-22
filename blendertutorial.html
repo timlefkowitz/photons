@@ -262,7 +262,35 @@
 
       <h1 style="color:#54b686">lets create!</h1>
       <p> I can ramble on and on with setup but lets go ahead and start building. First, You can make almost anything from a cube. My best friends in blender are the X, Y and Z Axis</p>
-      <p>Let's select the cube, hit tab to go into edit mode and hit s to go into scale mode. Once in scale mode we can hit z to scale along the z axis</p>
+
+
+      <img src="/img/cubetut1.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+      <p>Let's select the cube, hit tab to go into edit mode and hit s to go into scale mode. Once in scale mode we can hit Z to scale along the Z axis. This is how we can go from a cube to a foundation stone! </p>
+      <p>This is my favorite way to scale Meshes. Meshes are what we call the objects we are forming. You can also scale along the X and Y axis. It truely is amazing all the things you can create just by taking an object and scaling it</p>
+      <p>Now, Har. YAAAA.  Here are two tools that fight for second place. insert and extrude. As you see here when we select a face and press i for insert. We get a new box within the face. We can shrink this to our liking</p>
+
+      <p>Once we have a good size we can press E to extrude the center face. This pushes the selected face out or in. We can do so much with this!</p>
+      <img src="/img/cubetut2.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+
+      <img src="/img/cubetut3.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+      <p>Now we can add new objects by pressing Shift + A. Select Mesh > cylinder</p>
+      <a>a new cylinder appears! Lets sretch it with our scaling tools. Select the object, Press S. Then hit Z and move your mouse up to have it grow to your liking </a>
+      <a>Now for one of the last steps, Let's select every other face on the side of the column. Once every other face is selected we can bring them in with extrude E</a>
+
+<!--      <img src="/img/column3.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">-->
+
+      <img src="/img/column4.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+
+      <img src="/img/Column2.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+
+      <img src="/img/columsFinished.png" style="width: 95vh; padding-bottom: 2%; padding-top: 2%">
+
+      <a>Then all we have to do is recreate the bottom peice for the top :) </a>
+      <a>small details make a huge differance</a>
+
+      <button onclick="topFunction()" style="color:#54b686" id="myBtn" title="Go to top">Back to the Top</button>
+
+
 
 
     </div>
@@ -275,7 +303,27 @@
 
 
 
+<script>
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
 
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
 
 
 <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
