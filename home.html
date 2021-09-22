@@ -69,13 +69,13 @@
     <!-- Container wrapper -->
     <div class="container">
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="/home">
+        <a class="navbar-brand" href="home.html">
             <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
             <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
         </a>
 
-        <a class="navbar-brand me-2" href="/home.html">
-            PHOTONs
+        <a class="navbar-brand me-2" href="home.html">
+            <h4>photon labs</h4>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -105,8 +105,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">code</a>
+                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Development Projects</a>
                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">The Photon Foundation [project on hold]</a>
+                        <a class="dropdown-item" href="">PhotonMag [project on hold]</a>
+                        <a class="dropdown-item" href="">Help-Tank [project on hold]</a>
                         <a class="dropdown-item" href="calc.html">My Calculator</a>
                         <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
                         <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
@@ -119,13 +122,13 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="3d.html">3d creations</a>
+                    <a class="nav-link" href="3d.html">Game Design</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="flickarchive.html">photographs</a>
+                    <a class="nav-link" href="flickarchive.html">Photographic Archive</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutme.html">about me</a>
+                    <a class="nav-link" href="aboutme.html">About</a>
                 </li>
 
             </ul>
@@ -160,7 +163,7 @@
 <!--                        </form>-->
 <!--                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html" style="color:#00b1ae">blog</a>
+                        <a class="nav-link" href="blog.html" style="color:#00b1ae">Blog</a>
                     </li>
                     <li>
                         <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
@@ -208,248 +211,261 @@
     }
 </style>
 
+<style>
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        background-color: #f0f0f0;
+    }
+
+    body {
+        color: @gray;
+        font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+        /*padding: 1rem;*/
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -moz-font-feature-settings: "liga" on;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .btn {
+        background-color: white;
+        border: 1px solid @gray-light;
+    //border-radius: 1rem;
+        color: @gray-dark;
+        padding: 0.5rem;
+        text-transform: lowercase;
+    }
+
+    .btn--block {
+        display: block;
+        width: 100%;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards__item {
+        display: flex;
+        padding: 1rem;
+
+    }
+
+    .card {
+        background-color: rgba(65, 61, 61, 0.3);
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
 
 
-<!--      Custom Posting DIV   -->
-<div id="mainforpost" class="col-lg-12" >
-    <!--              UserPost        style="max-height: 400px;      -->
-    <div class="container userPost" style="height:100%">
-        <!--          Start of posting div-->
-        <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-            <div id="profileItems" style="margin-top:10vh">
+    .card__content {
+        display: flex;
+
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        filter: contrast(70%);
+    //filter: saturate(180%);
+        overflow: hidden;
+        position: relative;
+        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+    }
+
+    .card__image--flowers {
+        background-image: url(https://unsplash.it/800/600?image=82);
+    }
+
+    .card__image--river {
+        background-image: url(https://unsplash.it/800/600?image=11);
+    }
+
+    .card__image--record {
+        background-image: url(https://unsplash.it/800/600?image=39);
+    }
+
+    .card__image--fence {
+        background-image: url(https://unsplash.it/800/600?image=59);
+    }
+
+    .card__title {
+        color: blue;
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .card__text {
+        flex: 1 1 auto;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
 
 
-                <!--          Avatar and Add to Contacts Buttons-->
-                <div style="margin-bottom:1.8vh">
-                    <a href="javascript:;" class="avatar rounded-circle">
-                        <img class="avatar" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" style="height: 20vh; width: 20vh;">
-                    </a>
-                    <h1>Timothy Lefkowitz</h1>
-                    <a style="color:#737373;"> developer / artist / geek </a><p></p>
-<!--                    <a style="color:#737373;" href="/">photonlabs.xyz</a><br>-->
-<!--                    <a style="color:#737373;" href="Tim/contact">resume / cv</a>-->
-                </div>
+</style>
+
+<body>
+<main>
+
+    <section>
+
+        <!--      Custom Posting DIV   -->
+        <div id="mainforpost" class="col-lg-12" >
+            <!--              UserPost        style="max-height: 400px;      -->
+            <div class="container userPost" style="height:100%">
+                <!--          Start of posting div-->
+                <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
+                    <div id="profileItems" style="margin-top:10vh">
 
 
-
-                <ul class="cards">
-                    <li class="cards__item">
-                        <div class="card">
-                            <div class="card__image card__image--river"></div>
-                            <div class="card__content">
-                                <div class="card__title"><b>Photonlabs - Social Media Platform</b></div>
-                                <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                    This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn--block card__btn">code</a>
-                            </div>
+                        <!--          Avatar and Add to Contacts Buttons-->
+                        <div style="margin-bottom:1.8vh">
+                            <a href="javascript:;" class="avatar rounded-circle">
+                                <img class="avatar" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" style="height: 20vh; width: 20vh;">
+                            </a>
+                            <h1>Timothy Lefkowitz</h1>
+                            <a style="color:#737373;"> developer / artist / geek </a><p></p>
+                            <!--                    <a style="color:#737373;" href="/">photonlabs.xyz</a><br>-->
+                            <!--                    <a style="color:#737373;" href="Tim/contact">resume / cv</a>-->
                         </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <div class="card__image card__image--river"></div>
-                            <div class="card__content">
-                                <div class="card__title"><b>Photonlabs - Calculator</b></div>
-                                <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                    This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                <a class="btn btn--block card__btn" href="calc.html">Calculate</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <div class="card__image card__image--river"></div>
-                            <div class="card__content">
-                                <div class="card__title"><b>My Weather Map</b></div>
-                                <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>
-                                <a class="btn btn--block card__btn" href="weathermap.html">Weather Map</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image card__image--river"></div>
-                            <div class="card__content">
-                                <div class="card__title"><b>Photographic Archive</b></div>
-                                <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>
-                                <a class="btn btn--block card__btn" href="flickarchive.html">photographic archive</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__image card__image--river"></div>
-                            <div class="card__content">
-                                <div class="card__title"><b>Game and Environmental</b></div>
-                                <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
-                                <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <style>
-
-                    *,
-                    *::before,
-                    *::after {
-                        box-sizing: border-box;
-                    }
-
-                    html {
-                        background-color: #f0f0f0;
-                    }
-
-                    body {
-                        color: @gray;
-                        font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
-                        font-style: normal;
-                        font-weight: 400;
-                        letter-spacing: 0;
-                        /*padding: 1rem;*/
-                        text-rendering: optimizeLegibility;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        -moz-font-feature-settings: "liga" on;
-                    }
-
-                    img {
-                        height: auto;
-                        max-width: 100%;
-                        vertical-align: middle;
-                    }
-
-                    .btn {
-                        background-color: white;
-                        border: 1px solid @gray-light;
-                    //border-radius: 1rem;
-                        color: @gray-dark;
-                        padding: 0.5rem;
-                        text-transform: lowercase;
-                    }
-
-                    .btn--block {
-                        display: block;
-                        width: 100%;
-                    }
-
-                    .cards {
-                        display: flex;
-                        flex-wrap: wrap;
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    .cards__item {
-                        display: flex;
-                        padding: 1rem;
-
-                    }
-
-                    .card {
-                        background-color: rgba(65, 61, 61, 0.3);
-                        border-radius: 0.25rem;
-                        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-                        display: flex;
-                        flex-direction: column;
-                        overflow: hidden;
-                    }
-
-
-                    .card__content {
-                        display: flex;
-
-                        flex: 1 1 auto;
-                        flex-direction: column;
-                        padding: 1rem;
-                    }
-
-                    .card__image {
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        border-top-left-radius: 0.25rem;
-                        border-top-right-radius: 0.25rem;
-                        filter: contrast(70%);
-                    //filter: saturate(180%);
-                        overflow: hidden;
-                        position: relative;
-                        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-                    }
-
-                    .card__image--flowers {
-                        background-image: url(https://unsplash.it/800/600?image=82);
-                    }
-
-                    .card__image--river {
-                        background-image: url(https://unsplash.it/800/600?image=11);
-                    }
-
-                    .card__image--record {
-                        background-image: url(https://unsplash.it/800/600?image=39);
-                    }
-
-                    .card__image--fence {
-                        background-image: url(https://unsplash.it/800/600?image=59);
-                    }
-
-                    .card__title {
-                        color: blue;
-                        font-size: 1.25rem;
-                        font-weight: 300;
-                        letter-spacing: 2px;
-                        text-transform: uppercase;
-                    }
-
-                    .card__text {
-                        flex: 1 1 auto;
-                        font-size: 0.875rem;
-                        line-height: 1.5;
-                        margin-bottom: 1.25rem;
-                    }
-
-
-                </style>
-
-
-<!--              <a>I'm always working on some complicated things, Some of my ideas include: encrypting every post, giving it a key and letting that key only exist once. A new post then becomes a token </a>-->
-<!--              <p>You could export your token to a usb or maybe even etherum or dogecoin!! this is the idea. For now I'm happy learning how database structors work and how to grab the data i want.</p>-->
-
-<!--              <p>Thank you for reading, and viewing my very proud project! Thank you to Codeup and Thank you to my family <3</p>-->
 
 
 
-<!--            <div>-->
-<!--              <a style="font-size: 12px">username</a></s>-->
-<!--              <h6 style="align-items: center" th:text="${user.username}"></h6>-->
+                        <ul class="cards">
+                            <li class="cards__item">
+                                <div class="card">
+                                    <div class="card__image card__image--river"></div>
+                                    <div class="card__content">
+                                        <div class="card__title"><b>Photonlabs - Social Media Platform</b></div>
+                                        <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
+                                            This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
+                                        <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn--block card__btn">code</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards__item">
+                                <div class="card">
+                                    <div class="card__image card__image--river"></div>
+                                    <div class="card__content">
+                                        <div class="card__title"><b>Photonlabs - Calculator</b></div>
+                                        <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
+                                            This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
+                                        <a class="btn btn--block card__btn" href="calc.html">Calculate</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards__item">
+                                <div class="card">
+                                    <div class="card__image card__image--river"></div>
+                                    <div class="card__content">
+                                        <div class="card__title"><b>My Weather Map</b></div>
+                                        <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>
+                                        <a class="btn btn--block card__btn" href="weathermap.html">Weather Map</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__image card__image--river"></div>
+                                    <div class="card__content">
+                                        <div class="card__title"><b>Photographic Archive</b></div>
+                                        <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>
+                                        <a class="btn btn--block card__btn" href="flickarchive.html">photographic archive</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__image card__image--river"></div>
+                                    <div class="card__content">
+                                        <div class="card__title"><b>Game and Environmental</b></div>
+                                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
+                                        <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
 
 
-<!--&lt;!&ndash;              Status &ndash;&gt;-->
-<!--        <div>-->
-<!--          <a style="font-size: 12px">status</a>-->
-<!--            <h4 style="align-items: center" th:text="${user.status}"></h4>-->
-<!--        </div>-->
-
-<!--&lt;!&ndash;              Friends &ndash;&gt;-->
 
 
+                        <!--              <a>I'm always working on some complicated things, Some of my ideas include: encrypting every post, giving it a key and letting that key only exist once. A new post then becomes a token </a>-->
+                        <!--              <p>You could export your token to a usb or maybe even etherum or dogecoin!! this is the idea. For now I'm happy learning how database structors work and how to grab the data i want.</p>-->
 
-<!--&lt;!&ndash;              Featured Post  &ndash;&gt;-->
-<!--        <div>-->
-<!--          <a style="font-size: 12px">featuredPost</a>-->
-<!--&lt;!&ndash;          <img th:src="${usersPost.imgPath}" style="width: 85vh;">&ndash;&gt;-->
-<!--&lt;!&ndash;          <h4 style="align-items: center" th:text="${usersPost.title}"></h4>&ndash;&gt;-->
-<!--&lt;!&ndash;          <p style="align-items: center" th:text="${usersPost.body}"></p>&ndash;&gt;-->
-
-<!--          </div>-->
-
-<!--        </div>-->
+                        <!--              <p>Thank you for reading, and viewing my very proud project! Thank you to Codeup and Thank you to my family <3</p>-->
 
 
-<!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
 
-<!--&lt;!&ndash; jQuery library &ndash;&gt;-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+                        <!--            <div>-->
+                        <!--              <a style="font-size: 12px">username</a></s>-->
+                        <!--              <h6 style="align-items: center" th:text="${user.username}"></h6>-->
 
-<!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+                        <!--&lt;!&ndash;              Status &ndash;&gt;-->
+                        <!--        <div>-->
+                        <!--          <a style="font-size: 12px">status</a>-->
+                        <!--            <h4 style="align-items: center" th:text="${user.status}"></h4>-->
+                        <!--        </div>-->
+
+                        <!--&lt;!&ndash;              Friends &ndash;&gt;-->
+
+
+
+                        <!--&lt;!&ndash;              Featured Post  &ndash;&gt;-->
+                        <!--        <div>-->
+                        <!--          <a style="font-size: 12px">featuredPost</a>-->
+                        <!--&lt;!&ndash;          <img th:src="${usersPost.imgPath}" style="width: 85vh;">&ndash;&gt;-->
+                        <!--&lt;!&ndash;          <h4 style="align-items: center" th:text="${usersPost.title}"></h4>&ndash;&gt;-->
+                        <!--&lt;!&ndash;          <p style="align-items: center" th:text="${usersPost.body}"></p>&ndash;&gt;-->
+
+                        <!--          </div>-->
+
+                        <!--        </div>-->
+
+
+                        <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+                        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+                        <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
+                        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+
+                    </div>
+    </section>
+
+
+</main>
+<script>
+    // SCRIPTS HERE
+    <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
 
@@ -462,25 +478,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!--                ## clock-->
-                <script>
-                    function startTime(){
-                        const today = new Date();
-                        let h = today.getHours();
-                        let m = today.getMinutes();
-                        let s = today.getSeconds();
-                        m = checkTime(m);
-                        s = checkTime(s);
-                        document.getElementById('clock').innerText = h+":"+m+":"+s;
-                        setTimeout(startTime,1000);
-                    }
-                    startTime();
-                    function checkTime(i){
-                        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
-                        return i;
-                    }
+<script>
+    function startTime(){
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerText = h+":"+m+":"+s;
+        setTimeout(startTime,1000);
+    }
+    startTime();
+    function checkTime(i){
+        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
+        return i;
+    }
 
 
-                </script>
-            </div>
+</script>
+
+</script>
 </body>
 </html>
