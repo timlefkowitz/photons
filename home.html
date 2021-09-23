@@ -65,7 +65,7 @@
 
 
 <!-- Navbar -->
-<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
     <!-- Container wrapper -->
     <div class="container">
         <!-- Navbar brand -->
@@ -180,12 +180,11 @@
 
 
 
-<div class="wrapper">
+<!--<div class="wrapper">-->
 
-    <nav id="sidebar">
-
-    </nav>
-</div>
+<!--    <nav id="sidebar">-->
+<!--    </nav>-->
+<!--</div>-->
 
 
 
@@ -235,6 +234,39 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -moz-font-feature-settings: "liga" on;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+    nav {
+        background: #333333;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex; /* made unordered list a flex container */
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-family: Verdana;
+        display: inline-block; /* inline-block to increase clickable area beyond the text */
+        padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+    }
+    nav a:hover {
+        background: black;
+    }
+    nav ul li:nth-child(4) {
+        /*
+            this allows the last flex item to be right justified
+            by filling remaining space to the left of the flex item with margin
+        */
+        margin-left: auto;
     }
 
     img {
@@ -333,30 +365,36 @@
         margin-bottom: 1.25rem;
     }
     #header {
-        background-image: url("https://live.staticflickr.com/65535/51167437242_88c2704e62_h.jpg");
+        background-color: #22272b;
+        /*background-image: url("https://live.staticflickr.com/65535/51167437242_88c2704e62_h.jpg");*/
+        /*opacity: 0.33;*/
     }
+    /*.cards__item{*/
+    /*    max-width:40%;*/
+    /*}*/
 
 
 </style>
 
 <body>
 
-<div id="header" style="height:40vh; width:100%; align-content: center; text-align: center">
-<h6 style="padding-top:5%; color:#575741"><b>Photon Labs</b></h6>
-    <a>a computer science journal</a>
+<!--<div id="header" style="height:40vh; width:100%; align-content: start; text-align: start">-->
+<!--<h6 style="padding-top:5%; padding-left: 5%; color:#ffffff; font-size:23px"><b>Photon Labs</b></h6>-->
+<!--    <a style="color: #ffffff; padding-left: 5%;">a computer science journal</a>-->
 
-</div>
-
-
+<!--    <h6 style="text-align: end; color: #ffffff; padding-right: 5%; padding-top:80px">Special Thanks to Github Pages</h6>-->
+<!--</div>-->
 
                 <section>
                     <!--      Custom Posting DIV   -->
-                    <div id="mainforpost" class="col-lg-12" >
+                    <div id="mainforpost" class="col-lg-12" style="display: flex; justify-content: center" >
                         <!--              UserPost        style="max-height: 400px;      -->
                         <div class="container userPost" style="height:100%">
                             <!--          Start of posting div-->
                             <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
                                 <div id="profileItems" style="margin-top:10vh">
+
+
 
 
                                     <!--          Avatar and Add to Contacts Buttons-->
@@ -366,60 +404,65 @@
                                         </a>
                                         <h1>Timothy Lefkowitz</h1>
                                         <a style="color:#737373;"> developer / artist  </a><p></p>
-                                        <!--                    <a style="color:#737373;" href="/">photonlabs.xyz</a><br>-->
-                                        <!--                    <a style="color:#737373;" href="Tim/contact">resume / cv</a>-->
                                     </div>
-                                    <ul class="cards">
-                                        <li class="cards__item">
-                                            <div class="card">
-                                                <div class="card__image card__image--river"></div>
-                                                <div class="card__content">
-                                                    <div class="card__title"><b>Photonlabs - Social Media Platform</b></div>
-                                                    <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                                        This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                                    <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn--block card__btn">code</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="cards__item">
-                                            <div class="card">
-                                                <div class="card__image card__image--river"></div>
-                                                <div class="card__content">
-                                                    <div class="card__title"><b>Photonlabs - Calculator</b></div>
-                                                    <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.
-                                                        This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>
-                                                    <a class="btn btn--block card__btn" href="calc.html">Calculate</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="cards__item">
-                                            <div class="card">
-                                                <div class="card__image card__image--river"></div>
-                                                <div class="card__content">
-                                                    <div class="card__title"><b>My Weather Map</b></div>
-                                                    <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>
-                                                    <a class="btn btn--block card__btn" href="weathermap.html">Weather Map</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card__image card__image--river"></div>
-                                                <div class="card__content">
-                                                    <div class="card__title"><b>Photographic Archive</b></div>
-                                                    <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>
-                                                    <a class="btn btn--block card__btn" href="flickarchive.html">photographic archive</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card__image card__image--river"></div>
-                                                <div class="card__content">
-                                                    <div class="card__title"><b>Game and Environmental</b></div>
-                                                    <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
-                                                    <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+
+
+
+
+<!--                                    <div>-->
+<!--                                        <ul class="cards">-->
+<!--                                            <li class="cards__item">-->
+<!--                                                <div class="card" style="max-width:40%">-->
+<!--                                                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                                                    <div class="card__content" style="display: flex; justify-content: center; align-content: center;align-items: center; ">-->
+<!--                                                        <div class="card__title"><b>Photonlabs - Social Media Platform</b></div><img src="img/someCode.jpeg" style="max-width:80%">-->
+<!--                                                        <p class="card__text">Photonlabs is a Social Media Platform made for my capstone project for Codeup.-->
+<!--                                                            This application includes Users, Friends and Groups. Users can create post, groups and edit their profile.</p>-->
+<!--                                                        <a href="https://github.com/timlefkowitz/photonlabs" class="btn btn&#45;&#45;block card__btn">code</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li class="cards__item">-->
+<!--                                                <div class="card">-->
+<!--                                                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                                                    <div class="card__content">-->
+<!--                                                        <div class="card__title"><b>Photonlabs - Calculator</b></div>-->
+<!--                                                        <p class="card__text">A Simple Calculator Built with Javascript, CSS and HTML</p>-->
+<!--                                                        <a class="btn btn&#45;&#45;block card__btn" href="calc.html">Calculate</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                            <li class="cards__item">-->
+<!--                                                <div class="card" style="width:100%">-->
+<!--                                                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                                                    <div class="card__content">-->
+<!--                                                        <div class="card__title"><b>My Weather Map</b></div>-->
+<!--                                                        <p class="card__text">Using Mapbox API we brought in the weather for 3 days! today tomorrow and next!</p>-->
+<!--                                                        <a class="btn btn&#45;&#45;block card__btn" href="weathermap.html">Weather Map</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="card">-->
+<!--                                                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                                                    <div class="card__content">-->
+<!--                                                        <div class="card__title"><b>Photographic Archive</b></div>-->
+<!--                                                        <p class="card__text">a camera has been with me for most of my life, here is the Archive of my work</p>-->
+<!--                                                        <a class="btn btn&#45;&#45;block card__btn" href="flickarchive.html">photographic archive</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="card">-->
+<!--                                                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                                                    <div class="card__content">-->
+<!--                                                        <div class="card__title"><b>Game and Environmental</b></div>-->
+<!--                                                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>-->
+<!--                                                        <a class="btn btn&#45;&#45;block card__btn" href="3d.html">3D worlds</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
+<!--                                 </div>-->
+
+
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -469,22 +512,204 @@
 
 
                 </section>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card__image card__image--river"></div>
-                    <div class="card__content">
-                        <div class="card__title"><b>Game and Environmental</b></div>
-                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>
-                        <a class="btn btn--block card__btn" href="3d.html">3D worlds</a>
-                    </div>
-                </div>
-            </div>
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <div class="card">-->
+<!--                    <div class="card__image card__image&#45;&#45;river"></div>-->
+<!--                    <div class="card__content">-->
+<!--                        <div class="card__title"><b>Game and Environmental</b></div>-->
+<!--                        <p class="card__text">Game design is one of my favorite past times. I can't go too long without jumping in and working on design</p>-->
+<!--                        <a class="btn btn&#45;&#45;block card__btn" href="3d.html">3D worlds</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 
 
 </main>
+
+
+<body>
+
+
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">photon labs</h1>
+            <p class="lead my-3">a computer science journal </p>
+<!--            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>-->
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
+<!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
+                    <h3 class="mb-0">Photons - A Social Media Platform </h3>
+                    <div class="mb-1 text-muted">Aug 20th</div>
+                    <p class="card-text mb-auto">This platform was built on Java using Springboot, JQuery, Javascript, Mysql Thymeleaf and more. Users can Post, Create and join groups. Users can have a feed. With every post is a hashed String of post, creating a unique key.</p>
+                    <a href="https://github.com/timlefkowitz/photonlabs" class="stretched-link" style="color:white">Check out the code here</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+<!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
+                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
+                    <h3 class="mb-0">Game Design</h3>
+                    <div class="mb-1 text-muted">Sep 22th</div>
+                    <p class="card-text mb-auto">Game Design is one of my favorite passtimes, Here is a collection of Assets I've created</p>
+                    <a href="3d.html" class="stretched-link" style="color:white">Game Design</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
+                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
+                    <h3 class="mb-0">Photographic Archive</h3>
+                    <div class="mb-1 text-muted">Sep 22th</div>
+                    <p class="card-text mb-auto">Photography has been apart of my life and has opened up many doors, Here are some of the images I've captured over my lifetime</p>
+                    <a href="flickarchive.html" class="stretched-link" style="color:white">Photographic Archive</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
+                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
+                    <h3 class="mb-0">About</h3>
+                    <div class="mb-1 text-muted">Sep 22th</div>
+                    <p class="card-text mb-auto">About me, How to contact me and my resume</p>
+                    <a href="aboutme.html" class="stretched-link" style="color:white">about me</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                From the Blog
+            </h3>
+
+            <article class="blog-post">
+                <h2 class="blog-post-title">A Greek Column in Blender, Tips to get you started and Why I love Blender so much</h2>
+                <p class="blog-post-meta">Sep 22, 2021 by <a href="blendertutorial.html" style="color: black">Read Here</a></p>
+                <p>The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.<hr>
+
+                <h2 class="blog-post-title">Fixing the Japenses Maneki-neko (MoneyCat)</h2>
+                <p class="blog-post-meta">Sep 18, 2021 by <a href="moneyCat.html" style="color: black">Read Here</a></p>
+                <p>The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.<hr>
+
+
+
+
+            </article>
+
+
+<!--            <nav class="blog-pagination" aria-label="Pagination">-->
+<!--                <a class="btn btn-outline-primary" href="#">Older</a>-->
+<!--                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>-->
+<!--            </nav>-->
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4 class="fst-italic">random qoutes by me</h4>
+                    <p class="mb-0" id="randomQuote">Life is balance and life is change!</p>
+                </div>
+
+                <script>
+                    const Quote = [
+                        "Life is a balance, Life is Change",
+                        "Life Life",
+                        "A man that knows cannot learn"
+                    ]
+                </script>
+
+<!--                <div class="p-4">-->
+<!--                    <h4 class="fst-italic">Archives</h4>-->
+<!--                    <ol class="list-unstyled mb-0">-->
+<!--                        <li><a href="#">March 2021</a></li>-->
+<!--                        <li><a href="#">February 2021</a></li>-->
+<!--                        <li><a href="#">January 2021</a></li>-->
+<!--                        <li><a href="#">December 2020</a></li>-->
+<!--                        <li><a href="#">November 2020</a></li>-->
+<!--                        <li><a href="#">October 2020</a></li>-->
+<!--                        <li><a href="#">September 2020</a></li>-->
+<!--                        <li><a href="#">August 2020</a></li>-->
+<!--                        <li><a href="#">July 2020</a></li>-->
+<!--                        <li><a href="#">June 2020</a></li>-->
+<!--                        <li><a href="#">May 2020</a></li>-->
+<!--                        <li><a href="#">April 2020</a></li>-->
+<!--                    </ol>-->
+<!--                </div>-->
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Elsewhere</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/timlefkowitz" style="color: black">GitHub</a></li>
+                        <li><a href="https://flickr.com/photos/someoneshootingblind" style="color: black">Flickr</a></li>
+                        <li><a href="https://www.linkedin.com/in/timothy-lefkowitz" style="color: black">Linkedin</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="blog-footer">
+    <p>
+        <a href="#top" style="color: black"><h6>Back to top</h6></a>
+    </p>
+</footer>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
     // SCRIPTS HERE
     <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
