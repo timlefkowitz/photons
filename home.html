@@ -650,8 +650,24 @@
                     const Quote = [
                         "Life is a balance, Life is Change",
                         "Life Life",
-                        "A man that knows cannot learn"
+                        "A man that knows cannot learn",
+                        "Computer Science is cool"
                     ]
+
+                    var up = document.getElementById('GFG_UP');
+                    var down = document.getElementById('GFG_DOWN');
+
+
+
+                    up.innerHTML = "Click on the button to check "
+                        + "the type of element.<br><br>" + arr;
+
+                    function QuoteGenerator() {
+                        down.innerHTML =
+                            Quote[Math.floor(Math.random() * Quote.length)];
+                    }
+                    QuoteGenerator()
+                    console.log(down);
                 </script>
 
 <!--                <div class="p-4">-->
