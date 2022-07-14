@@ -256,7 +256,7 @@
 
 <script src="resources/threejs/r105/js/loaders/LoaderSupport.js"></script>
 <script src="resources/threejs/r105/js/loaders/OBJLoader2.js"></script>
-<script src="js\GLTFLoader.js"></script>
+<script src="GLTFLoader.js"></script>
 <script>
     let scene, camera, renderer;
 
@@ -274,7 +274,7 @@
         renderer.setSize(window.innerWidth,window.innerHeight);
         document.body.appendChild(renderer.domElement);
         let loader = new THREE.GLTFLoader();
-        loader.load('3dObjects/1.gltf', function(gltf){
+        loader.load('1.gltf', function(gltf){
             scene.add(gltf.scene);
             renderer.render(scene,camera);
         });
