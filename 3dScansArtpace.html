@@ -221,40 +221,10 @@
             <img src="img/bridge.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
             <p style="align-items: center">A bridge asset</p>
 
-            <img src="https://live.staticflickr.com/65535/51145425173_6479489f76_b.jpg" style="width: 95vh; padding-bottom: 2%">
-            <p style="align-items: center">An Experiment with lighting and Sand</p>
-
-            <img src="img/shipInHangar.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
-            <p style="align-items: center">spaceship hanger</p>
-
-            <img src="https://live.staticflickr.com/65535/51146319115_89d52deaf2_o.jpg" style="width: 95vh; padding-bottom: 2%">
-            <p style="align-items: center">Towers, inspiration from Genshin Impact</p>
-
-            <img src="https://live.staticflickr.com/65535/51145425188_bd40ebb46a_b.jpg" style="width: 95vh; padding-bottom: 2%">
-            <p style="align-items: center">Enviormental experiementals</p>
-
-            <img src="https://live.staticflickr.com/65535/51144535882_ba55f94122_b.jpg" style="width: 95vh; padding-bottom: 2%">
-            <p style="align-items: center">Architectural Experiments - Game Asset</p>
-
-            <img src="https://live.staticflickr.com/65535/51145435563_10ac566895_o.jpg" style="width: 95vh; padding-bottom: 2%">
-            <p style="align-items: center">Architectural Experiments - Game Asset</p>
 
 
 
 
-
-
-<!--            <p>I found this Maneki at my local Chinese resturant. When I asked about it we realized this Maneki-neko was broken! This brought a smile to my face and I had to take her home to get fixed.</p>-->
-<!--            <img src="img/cat.jpg" style="width: 85vh; padding-bottom: 2%">-->
-<!--            <img src="img/cat1.jpg" style="width: 85vh; padding-bottom: 2%">-->
-<!--            <p>After opening her up I was amazed at the simplicity. She is almost designed like a clock or what a clock looks like before a clock was a clock, the coil was cut! carefully unwinding a bit of the coil and soldering it back brought her back to life! These make the perfect beginner project to electronics, which makes the perfect beginners project.</p>-->
-
-            <!--                    <img th:src="${usersPost.getOwnerUser().originalavatar}" style="height: 20px; width: 20px;">-->
-
-            <!--      <a th:href="'/i/' + ${usersPost.getOwner().username}">-->
-            <!--      <a style="font-family:lato"><b>Timothy Lefkowitz</b>-->
-            <!--        <img src="img/cat2.jpg" style="height: 32px; width: 32px;">-->
-<!--            <h6 style="align-items: center" text=""></h6></a>-->
         </div>
 
 
@@ -282,25 +252,37 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
-<!--## clock-->
-<script>
-    function startTime(){
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('clock').innerText = h+":"+m+":"+s;
-        setTimeout(startTime,1000);
-    }
-    startTime()
-    function checkTime(i){
-        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
-        return i;
-    }
 
+
+<script src="resources/threejs/r105/js/loaders/LoaderSupport.js"></script>
+<script src="resources/threejs/r105/js/loaders/OBJLoader2.js"></script>
+<script src="GLTFLoader.js"></script>
+<script>
+    let scene, camera, renderer;
+
+    function inti(){
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xdddddd);
+
+        camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+
+        hlight = new THREE.AmbientLight(0x404040,100);
+        scene.add(hlight);
+
+        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        let loader = new THREE.GLTFLoader();
+        loader.load('scene.gltf', function(gltf){
+            scene.add(gltf.scene);
+            renderer.render(scene,camera);
+        });
+
+
+    }
 </script>
+
 
 
 
