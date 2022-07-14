@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=375, initial-scale=1">
+    <title>Hi, I'm Tim</title>
 
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--    //favcon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
+
+    <!--      Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+    <!--  convert to a stylesheet later -->
+    <style>
+
+        * {
+
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .status{
+            background: linear-gradient(to bottom right, #57e1e0 0%, #c408a5 100%);
+            max-width: 300px;
+        }
+
+        .bodytext{
+            background: linear-gradient(to bottom right, #4a5252 0%, #151315 100%);
+            max-width: 300px;
+        }
+
+        /*iphone x media query*/
+        @media only screen and (min-width: 375px) and (max-width: 767px) { /* Your Styles... */ }
+
+
+    </style>
+
+    <!--    //favcon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
+
+</head>
+
+
+
+<!--<body style="background: linear-gradient(to left, #00AAFF, #00FF6c)";>-->
+
+<!-- Navbar -->
+<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+    <!-- Container wrapper -->
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="home.html">
+            <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
+            <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
+
+        <a class="navbar-brand me-2" href="home.html">
+            <h4>photon labs</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Toggle button -->
+        <!--        <button-->
+        <!--                class="navbar-toggler"-->
+        <!--                type="button"-->
+        <!--                data-mdb-toggle="collapse"-->
+        <!--                data-mdb-target="#navbarButtonsExample"-->
+        <!--                aria-controls="navbarButtonsExample"-->
+        <!--                aria-expanded="false"-->
+        <!--                aria-label="Toggle navigation"-->
+        <!--        >-->
+        <!--            <i class="fas fa-bars"></i>-->
+        <!--        </button>-->
+        <style>
+            .dropdown-item  {
+                background-color: #646161;
+                hover: #00b1ae;
+            }
+        </style>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Development Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">The Photon Foundation [comeback soon]</a>
+                        <a class="dropdown-item" href="">PhotonMag [comeback soon]</a>
+                        <a class="dropdown-item" href="">Help-Tank [comeback soon]</a>
+                        <a class="dropdown-item" href="">CrushedMonkey [comeback soon]</a>
+                        <a class="dropdown-item" href="calc.html">My Calculator</a>
+                        <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
+                        <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
+                        <a class="dropdown-item" href="konami.html">Konami Code</a>
+                        <a class="dropdown-item" href="weathermap.html">Weather Map</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <!--                        <a class="dropdown-item" href="#three">three</a>-->
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="3d.html">Game Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="flickarchive.html">Photographic Archive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutme.html">About</a>
+                </li>
+
+            </ul>
+
+
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="post">post</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" th:action="@{/logout}" th:method="post" th:href="logout">logout</a>-->
+                    <!--                    </li>-->
+
+                    <!--                    <li class="nav-item">-->
+                    <!--&lt;!&ndash;                         <a&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        class="btn btn-dark px-3 material-icons-outlined"&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        href="myprofile"&ndash;&gt;-->
+                    <!--&lt;!&ndash;                        role="button">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;                             <i class="material-icons" style="font-size:14px;">account_circle</i>&ndash;&gt;-->
+                    <!--&lt;!&ndash;                         </a>&ndash;&gt;-->
+                    <!--                    </li>-->
+
+                    <!-- More links here... -->
+                    <!-- More links here... -->
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <form th:action="@{/logout}" th:method="post">-->
+                    <!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
+                    <!--                        </form>-->
+                    <!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" style="color:#00b1ae">Blog</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- END OF NAVBAR     -->
+
+
+
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+
+    </nav>
+</div>
+
+
+
+
+
+<style>
+    a:link {
+        color:#dcdcdc;
+    }
+
+    /* visited link */
+    a:visited {
+        color: #00b1ae;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #00b1ae;
+    }
+
+    /* selected link */
+    a:active {
+        color:#dcdcdc;
+    }
+</style>
+
+
+
+<!--      USERS POSTS DIV   -->
+<div id="mainforpost" class="col-lg-12" style="align-items: center; align-content: center; padding-top: 3%; padding-right: 17%; padding-left: 17%">
+
+    <!--              UserPost        style="max-height: 400px;      -->
+    <div class="container userPost" style="height:100%">
+        <!--          Start of posting div-->
+        <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
+
+
+
+
+<!--            <h4 style="align-items: left; color:#009694" text="Fixing the MoneyCat">Fixing the Japenses Maneki-neko (MoneyCat)</h4>-->
+            <img src="img/bridge.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
+            <p style="align-items: center">A bridge asset</p>
+
+            <img src="https://live.staticflickr.com/65535/51145425173_6479489f76_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">An Experiment with lighting and Sand</p>
+
+            <img src="img/shipInHangar.gif" style="width: 95vh; padding-bottom: 2%; color:#484848">
+            <p style="align-items: center">spaceship hanger</p>
+
+            <img src="https://live.staticflickr.com/65535/51146319115_89d52deaf2_o.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Towers, inspiration from Genshin Impact</p>
+
+            <img src="https://live.staticflickr.com/65535/51145425188_bd40ebb46a_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Enviormental experiementals</p>
+
+            <img src="https://live.staticflickr.com/65535/51144535882_ba55f94122_b.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Architectural Experiments - Game Asset</p>
+
+            <img src="https://live.staticflickr.com/65535/51145435563_10ac566895_o.jpg" style="width: 95vh; padding-bottom: 2%">
+            <p style="align-items: center">Architectural Experiments - Game Asset</p>
+
+
+
+
+
+
+<!--            <p>I found this Maneki at my local Chinese resturant. When I asked about it we realized this Maneki-neko was broken! This brought a smile to my face and I had to take her home to get fixed.</p>-->
+<!--            <img src="img/cat.jpg" style="width: 85vh; padding-bottom: 2%">-->
+<!--            <img src="img/cat1.jpg" style="width: 85vh; padding-bottom: 2%">-->
+<!--            <p>After opening her up I was amazed at the simplicity. She is almost designed like a clock or what a clock looks like before a clock was a clock, the coil was cut! carefully unwinding a bit of the coil and soldering it back brought her back to life! These make the perfect beginner project to electronics, which makes the perfect beginners project.</p>-->
+
+            <!--                    <img th:src="${usersPost.getOwnerUser().originalavatar}" style="height: 20px; width: 20px;">-->
+
+            <!--      <a th:href="'/i/' + ${usersPost.getOwner().username}">-->
+            <!--      <a style="font-family:lato"><b>Timothy Lefkowitz</b>-->
+            <!--        <img src="img/cat2.jpg" style="height: 32px; width: 32px;">-->
+<!--            <h6 style="align-items: center" text=""></h6></a>-->
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<!--## clock-->
+<script>
+    function startTime(){
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerText = h+":"+m+":"+s;
+        setTimeout(startTime,1000);
+    }
+    startTime()
+    function checkTime(i){
+        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
+        return i;
+    }
+
+</script>
+
+
+
+</body>
+</html>
