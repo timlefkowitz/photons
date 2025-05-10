@@ -66,115 +66,17 @@
     }
 </style>
 
-<!-- Navbar -->
-<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark ">
-    <!-- Container wrapper -->
-    <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="home.html">
-            <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
-            <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-        </a>
+<!-- NavBar -->
+<div id="navbar"></div>
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
 
-        <a class="navbar-brand me-2" href="home.html">
-            PHOTONS
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Toggle button -->
-        <!--        <button-->
-        <!--                class="navbar-toggler"-->
-        <!--                type="button"-->
-        <!--                data-mdb-toggle="collapse"-->
-        <!--                data-mdb-target="#navbarButtonsExample"-->
-        <!--                aria-controls="navbarButtonsExample"-->
-        <!--                aria-expanded="false"-->
-        <!--                aria-label="Toggle navigation"-->
-        <!--        >-->
-        <!--            <i class="fas fa-bars"></i>-->
-        <!--        </button>-->
-        <style>
-            .dropdown-item  {
-                background-color: #646161;
-                hover: #00b1ae;
-            }
-        </style>
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">code</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="calc.html">My Calculator</a>
-                        <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
-                        <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
-                        <a class="dropdown-item" href="konami.html">Konami Code</a>
-                        <a class="dropdown-item" href="weathermap.html">Weather Map</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <!--                        <a class="dropdown-item" href="#three">three</a>-->
-                    </div>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="3d.html">3d creations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="flickarchive.html">photographs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutme.html">about me</a>
-                </li>
-
-            </ul>
-
-
-            <!-- Left links -->
-
-            <div class="d-flex align-items-center">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!--                    <li class="nav-item">-->
-                    <!--                        <a class="nav-link" href="post">post</a>-->
-                    <!--                    </li>-->
-                    <!--                    <li class="nav-item">-->
-                    <!--                        <a class="nav-link" th:action="@{/logout}" th:method="post" th:href="logout">logout</a>-->
-                    <!--                    </li>-->
-
-                    <!--                    <li class="nav-item">-->
-                    <!--&lt;!&ndash;                         <a&ndash;&gt;-->
-                    <!--&lt;!&ndash;                        class="btn btn-dark px-3 material-icons-outlined"&ndash;&gt;-->
-                    <!--&lt;!&ndash;                        href="myprofile"&ndash;&gt;-->
-                    <!--&lt;!&ndash;                        role="button">&ndash;&gt;-->
-
-                    <!--&lt;!&ndash;                             <i class="material-icons" style="font-size:14px;">account_circle</i>&ndash;&gt;-->
-                    <!--&lt;!&ndash;                         </a>&ndash;&gt;-->
-                    <!--                    </li>-->
-
-                    <!-- More links here... -->
-                    <!-- More links here... -->
-                    <!--                    <li class="nav-item">-->
-                    <!--                        <form th:action="@{/logout}" th:method="post">-->
-                    <!--                            <button class="btn-link btn" style="text-decoration: none; color:#00b1ae">logout</button>-->
-                    <!--                        </form>-->
-                    <!--                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html" style="color:#00b1ae">blog</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-</nav>
-<!-- END OF NAVBAR     -->
+<!-- End of NavBar -->
 
 
 

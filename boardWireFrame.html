@@ -45,6 +45,18 @@
 
 </style>
 
+<!-- NavBar -->
+<div id="navbar"></div>
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
+<!-- End of NavBar -->
+
 <div class="container-fluid mainJobBoardBox" style="height: 85vw">
     <div class="row">
         <!--        Title and search bar-->
