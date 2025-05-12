@@ -1,691 +1,227 @@
-<!--
-[][][] Thank you for viewing my capstone project [][][]
-[][][][][][][][][] Please bare with my code [][][][][][]
-[][][][][][][][][] Tue 20th 2:04AM [][][][][][][][][][]
-[][][][][][][][][] Timothy Craig Lefkowitz[][][][][][][]
--->
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name=viewport content="width=375, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I'm Tim</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
 
-    <!-- CSS only -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!--    //favcon-->
-    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
-
-    <!--      Google Icons -->
+    <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-
-
-    <!--  convert to a stylesheet later -->
-    <style>
-
-        * {
-
-        }
-
-        .avatar {
-            vertical-align: middle;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .status{
-            background: linear-gradient(to bottom right, #57e1e0 0%, #c408a5 100%);
-            max-width: 300px;
-        }
-
-        .bodytext{
-            background: linear-gradient(to bottom right, #4a5252 0%, #151315 100%);
-            max-width: 300px;
-        }
-
-        /*iphone x media query*/
-        @media only screen and (min-width: 375px) and (max-width: 767px) { /* Your Styles... */ }
-
-
-    </style>
-
-    <!--    //favcon-->
-    <link rel="icon" type="image/png" sizes="16x16" href="https://live.staticflickr.com/65535/51320697245_9708355788_c.jpg">
-
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-
-
-<body style="background: linear-gradient(to left, #00AAFF, #00FF6c)";>
-
-
-
-<!-- Navbar -->
-<nav class="fixed-left navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-    <!-- Container wrapper -->
-    <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="home.html">
-            <!--            <img th:src="@{/users/avatars/BlueSphere1.2.gif}" width="50" height="50" class="d-inline-block align-top" alt=""/>-->
-            <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-        </a>
-
-        <a class="navbar-brand me-2" href="home.html">
-            <h4>PhotonLabs</h4>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Toggle button -->
-        <!--        <button-->
-        <!--                class="navbar-toggler"-->
-        <!--                type="button"-->
-        <!--                data-mdb-toggle="collapse"-->
-        <!--                data-mdb-target="#navbarButtonsExample"-->
-        <!--                aria-controls="navbarButtonsExample"-->
-        <!--                aria-expanded="false"-->
-        <!--                aria-label="Toggle navigation"-->
-        <!--        >-->
-        <!--            <i class="fas fa-bars"></i>-->
-        <!--        </button>-->
-        <style>
-            .dropdown-item  {
-                background-color: #646161;
-                hover: #00b1ae;
-            }
-        </style>
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bg-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Development Projects</a>
-                    <div class="dropdown-menu">
-                      <!--  <a class="dropdown-item" href="">The Photon Foundation [comeback soon]</a>
-                        <a class="dropdown-item" href="">PhotonMag [comeback soon]</a>
-                        <a class="dropdown-item" href="">Help-Tank [comeback soon]</a>
-                        <a class="dropdown-item" href="">CrushedMonkey [comeback soon]</a> -->
-                        <a class="dropdown-item" href="calc.html">My Calculator</a>
-                        <a class="dropdown-item" href="coffee.html">Coffee Project(my first paired programming project)</a>
-                        <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
-                        <a class="dropdown-item" href="konami.html">Konami Code</a>
-                        <a class="dropdown-item" href="weathermap.html">Weather Map</a>
-                        <div role="separator" class="dropdown-divider"></div>
-<!--                        <a class="dropdown-item" href="#three">three</a>-->
-                    </div>
-                </li>
-
-                <p></p>
-                <li class="nav-item">
-                    <a class="nav-link" href="3d.html">Game Design</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="flickarchive.html">Photographic Archive</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutme.html">About</a>
-                </li>
-
-            </ul>
-            <!-- Left links -->
-
-            <div class="d-flex align-items-center">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="https://live.staticflickr.com/65535/51369056853_85ef692ae7_o.gif" width="50" height="50" class="d-inline-block align-top" alt="PhotonLabs Logo">
+            </a>
+            <a class="navbar-brand me-2" href="home.html">
+                <h4>PhotonLabs</h4>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html" style="color:#00b1ae">Blog</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Development Projects</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="calc.html">My Calculator</a>
+                            <a class="dropdown-item" href="coffee.html">Coffee Project</a>
+                            <a class="dropdown-item" href="foods.html">Favorite Foods Map</a>
+                            <a class="dropdown-item" href="konami.html">Konami Code</a>
+                            <a class="dropdown-item" href="weathermap.html">Weather Map</a>
+                        </div>
                     </li>
-                    <li>
-                        <a class="nav-link" id="clock" style="color:#00b1ae">01:20am</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="3d.html">Game Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="flickarchive.html">Photographic Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About</a>
                     </li>
                 </ul>
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" id="clock">01:20am</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-</nav>
-<!-- END OF NAVBAR     -->
+    </nav>
 
-<style>
-    a:link {
-        color:#dcdcdc;
-    }
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <!-- Hero Section -->
+        <section class="text-center my-5">
+            <div class="user-post">
+                <img class="avatar rounded-circle" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" alt="Tim's Avatar" style="height: 20vh; width: 20vh;">
+                <h1>Hi, I'm Tim</h1>
+                <p class="text-muted">programmer / artist</p>
+            </div>
+        </section>
 
-    /* visited link */
-    a:visited {
-        color: #00b1ae;
-    }
+        <!-- Intro Section -->
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Software should serve people, not control them. I build tools that empower, not exploit.</h1>
+                <p class="lead my-3">This is my computer sci / Art journal :D</p>
+            </div>
+        </div>
 
-    /* mouse over link */
-    a:hover {
-        color: #00b1ae;
-    }
+        <!-- Professional Experience -->
+        <section class="text-center my-5">
+            <h3 class="text-muted">Professional Experience</h3>
+        </section>
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column position-static bg-card">
+                <h3 class="mb-0">United States Postal Service</h3>
+                <div class="mb-1 text-muted">March 2022</div>
+                <p class="card-text mb-auto">
+                    Developer on a team to analyze, design, and build a system built on multiple components of application code on a microservices architecture project with Java, Kafka, Akka, Redis, OpenShift, Docker in an Agile setting. Work with functional support to investigate and resolve defects. Skills: AWS, Go, Python, OpenShift, Kubernetes, Jenkins.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column position-static bg-card">
+                <h3 class="mb-0">Medicare & Medicaid Services</h3>
+                <div class="mb-1 text-muted">October 2023</div>
+                <p class="card-text mb-auto">
+                    Develop and customize software solutions to meet client needs, including conversions, interfaces, enhancements, and UI modifications. Handle full-cycle development from analysis to deployment and maintenance. Apply expertise in technologies, processes, and tools to support projects. Proficient in Scala and RESTful APIs, with strong organizational skills and attention to detail.
+                </p>
+            </div>
+        </div>
 
-    /* selected link */
-    a:active {
-        color:#dcdcdc;
-    }
-</style>
+        <!-- Personal Projects -->
+        <section class="text-center my-5">
+            <h3 class="text-muted">Personal Projects</h3>
+        </section>
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column position-static bg-card">
+                <h3 class="mb-0">Trainer's Corner - Pokemon TCG</h3>
+                <div class="mb-1 text-muted">May 11th</div>
+                <p class="card-text mb-auto">
+                    This platform was built with Rust, React, PostgreSQL. An all-in-one hub for collecting Pokemon cards. Snap a photo to instantly add cards to your portfolio, grade cards, connect with other collectors, and follow friends' collections.
+                </p>
+                <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="stretched-link text-white">Check out the code here</a>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column position-static bg-card">
+                <h3 class="mb-0">Provence</h3>
+                <div class="mb-1 text-muted">May 11th</div>
+                <p class="card-text mb-auto">
+                    This platform was built with Rust, React, PostgreSQL. An all-in-one hub for collecting Pokemon cards. Snap a photo to instantly add cards to your portfolio, grade cards, connect with other collectors, and follow friends' collections.
+                </p>
+                <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="stretched-link text-white">Check out the code here</a>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column position-static bg-card">
+                <h3 class="mb-0">Photons - A Social Media Platform</h3>
+                <div class="mb-1 text-muted">Aug 20th</div>
+                <p class="card-text mb-auto">
+                    This platform was built on Java using Spring Boot, jQuery, JavaScript, MySQL, Thymeleaf, and more. Users can post, create, and join groups, and have a feed. Each post has a hashed string, creating a unique key.
+                </p>
+                <a href="https://github.com/timlefkowitz/photonlabs" class="stretched-link text-white">Check out the code here</a>
+            </div>
+        </div>
 
-<style>
-
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
-    html {
-        background-color: #f0f0f0;
-    }
-
-    body {
-        color: @gray;
-        font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: 0;
-        /*padding: 1rem;*/
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -moz-font-feature-settings: "liga" on;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-    body {
-        margin: 0;
-    }
-    nav {
-        background: #333333;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex; /* made unordered list a flex container */
-    }
-    nav a {
-        text-decoration: none;
-        color: white;
-        font-family: Verdana;
-        display: inline-block; /* inline-block to increase clickable area beyond the text */
-        padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
-    }
-    nav a:hover {
-        background: black;
-    }
-    nav ul li:nth-child(4) {
-        /*
-            this allows the last flex item to be right justified
-            by filling remaining space to the left of the flex item with margin
-        */
-        margin-left: auto;
-    }
-
-    img {
-        height: auto;
-        max-width: 100%;
-        vertical-align: middle;
-    }
-
-    .btn {
-        background-color: white;
-        border: 1px solid gray-light;
-        border-radius: 1rem;
-        color: gray-dark;
-        padding: 0.5rem;
-        text-transform: lowercase;
-    }
-
-    .btn--block {
-        display: block;
-        width: 100%;
-    }
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .cards__item {
-        display: flex;
-        padding: 1rem;
-
-    }
-
-    .card {
-        background-color: rgba(65, 61, 61, 0.3);
-        border-radius: 0.25rem;
-        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-
-    .card__content {
-        display: flex;
-
-        flex: 1 1 auto;
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .card__image {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem;
-        filter: contrast(70%);
-    //filter: saturate(180%);
-        overflow: hidden;
-        position: relative;
-        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-    }
-
-    .card__image--flowers {
-        background-image: url(https://unsplash.it/800/600?image=82);
-    }
-
-    .card__image--river {
-        background-image: url(https://unsplash.it/800/600?image=11);
-    }
-
-    .card__image--record {
-        background-image: url(https://unsplash.it/800/600?image=39);
-    }
-
-    .card__image--fence {
-        background-image: url(https://unsplash.it/800/600?image=59);
-    }
-
-    .card__title {
-        color: blue;
-        font-size: 1.25rem;
-        font-weight: 300;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-
-    .card__text {
-        flex: 1 1 auto;
-        font-size: 0.875rem;
-        line-height: 1.5;
-        margin-bottom: 1.25rem;
-    }
-    #header {
-        background-color: #22272b;
-        /*background-image: url("https://live.staticflickr.com/65535/51167437242_88c2704e62_h.jpg");*/
-        /*opacity: 0.33;*/
-    }
-    /*.cards__item{*/
-    /*    max-width:40%;*/
-    /*}*/
-
-
-</style>
-
-<body>
-
-
-                <section>
-                    <!--      Custom Posting DIV   -->
-                    <div id="mainforpost" class="col-lg-12" style="display: flex; justify-content: center" >
-                        <!--              UserPost        style="max-height: 400px;      -->
-                        <div class="container userPost" style="height:100%">
-                            <!--          Start of posting div-->
-                            <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-                                <div id="profileItems" style="margin-top:10vh">
-
-
-
-
-                                    <!--          Avatar and Add to Contacts Buttons-->
-                                    <div style="margin-bottom:1.8vh">
-                                        <a href="javascript:;" class="avatar rounded-circle">
-                                            <img class="avatar" src="https://live.staticflickr.com/65535/51372494246_27f10fbeec_o.gif" style="height: 20vh; width: 20vh;">
-                                        </a>
-                                        <h1>Hi, I'm Tim</h1>
-                                        <a style="color:#737373;"> programmer / artist  </a><p></p>
-                                    </div>
-                                 </div>
-                            </div>
-                        </div>
+        <!-- Other Sections -->
+        <section class="text-center my-5">
+            <h3 class="text-muted">Others</h3>
+        </section>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-card">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">Game Design</h3>
+                        <div class="mb-1 text-muted">Sep 22th</div>
+                        <p class="card-text mb-auto">Game Design is one of my favorite pastimes. Here is a collection of assets I've created.</p>
+                        <a href="3d.html" class="stretched-link text-white">Game Design</a>
                     </div>
-                </section>
-
-        </div>
-    </div>
-</main>
-
-
-<body>
-<main class="container">
-    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">Software should serve people, not control them. I build tools that empower, not exploit.</h1>
-            <p class="lead my-3"> This is my computer sci / Art journal :D </p>
-            <p>  </p>
-<!--            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>-->
-        </div>
-    </div>
-
-
-
-    <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-                                <div id="profileItems" style="margin-top:10vh">
-
-                                    <!--          Avatar and Add to Contacts Buttons-->
-                                    <div style="margin-bottom:1.8vh">
-                                        <a style="color:#737373;"> professional experiance  </a><p></p>
-                                    </div>
-                                 </div>
-    </div>
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-<!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
-                    <h3 class="mb-0">United States Postal Service</h3>
-                    <div class="mb-1 text-muted">March 2022</div>
-                    <p class="card-text mb-auto">
-                                       Developer on a team to analyze, design, and build a system built on multiple components
-                         of application code on a microservices architecture project with Java, Kafka, Akka, 
-                         Redis, OpenShift, Docker in an Agile setting. Work with functional support to
-                         investigate and resolve defect skills: AWS, Go, Python, OpenShift, Kubernetes, 
-                         Jenkins.
-                    </p>
                 </div>
-
-
-            <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <h3 class="mb-0">Medicare & Medicaid Services</h3>
-                    <div class="mb-1 text-muted">October 2023</div>
-                    <p class="card-text mb-auto">
-                        Develop and customize software solutions to meet client needs, 
-                        including conversions, interfaces, enhancements, and UI modifications.
-                         Handle full-cycle development from analysis to deployment and 
-                         maintenance. Apply expertise in technologies, processes, and tools
-                          to support projects. Proficient in Scala and RESTful APIs, 
-                          with strong organizational skills and attention to detail.	
-                    </p>
             </div>
-
-                <!----     -->
-
-                <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-                                <div id="profileItems" style="margin-top:10vh">
-
-                                    <!--          Avatar and Add to Contacts Buttons-->
-                                    <div style="margin-bottom:1.8vh">
-                                        <a style="color:#737373;"> personal projects  </a><p></p>
-                                    </div>
-                                 </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-card">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">Photographic Archive</h3>
+                        <div class="mb-1 text-muted">Sep 22th</div>
+                        <p class="card-text mb-auto">Photography has been a part of my life and has opened many doors. Here are some images I've captured.</p>
+                        <a href="flickarchive.html" class="stretched-link text-white">Photographic Archive</a>
+                    </div>
                 </div>
-
-                <!----     -->
-
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <h3 class="mb-0">Trainer's Corner - Pokemon TCG</h3>
-                    <div class="mb-1 text-muted">May 11th</div>
-                    <p class="card-text mb-auto">This platform was built Rust, React, Postseql. <br>
-                        We are making an all-in-one hub for collecting Pokemon cards.
-                        Snap a photo to instantly add cards to your portfolio. Grad
-                        cards with just a photo, connect with other collectors, 
-                        Follow your friends, keep up with their collections
-                    </p>
-                     <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="stretched-link" style="color:white">Check out the code here</a>
-                </div>
-            
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <h3 class="mb-0">Provence</h3>
-                    <div class="mb-1 text-muted">May 11th</div>
-                    <p class="card-text mb-auto">This platform was built Rust, React, Postseql. <br>
-                        We are making an all-in-one hub for collecting Pokemon cards.
-                        Snap a photo to instantly add cards to your portfolio. Grad
-                        cards with just a photo, connect with other collectors, 
-                        Follow your friends, keep up with their collections
-                    </p>
-                     <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="stretched-link" style="color:white">Check out the code here</a>
-                </div>
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <h3 class="mb-0">Photons - A Social Media Platform </h3>
-                    <div class="mb-1 text-muted">Aug 20th</div>
-                    <p class="card-text mb-auto">This platform was built on Java using Springboot, JQuery, Javascript, Mysql Thymeleaf and more. Users can Post, Create and join groups. Users can have a feed. With every post is a hashed String of post, creating a unique key.</p>
-                    <a href="https://github.com/timlefkowitz/photonlabs" class="stretched-link" style="color:white">Check out the code here</a>
-                </div>
-
-                <!---    -->
-
-                    <div class="row postingDiv" style="display: flex; justify-content: center; align-items: center; text-align: center">
-                                <div id="profileItems" style="margin-top:10vh">
-
-                                    <!--          Avatar and Add to Contacts Buttons-->
-                                    <div style="margin-bottom:1.8vh">
-                                        <a style="color:#737373;"> Others  </a><p></p>
-                                    </div>
-                                 </div>
-    </div>
-
-                <!---    -->
-
-        <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
-                    <h3 class="mb-0">Game Design</h3>
-                    <div class="mb-1 text-muted">Sep 22th</div>
-                    <p class="card-text mb-auto">Game Design is one of my favorite passtimes, Here is a collection of Assets I've created</p>
-                    <a href="3d.html" class="stretched-link" style="color:white">Game Design</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-card">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">About</h3>
+                        <div class="mb-1 text-muted">Sep 22th</div>
+                        <p class="card-text mb-auto">About me, how to contact me, and my resume.</p>
+                        <a href="aboutme.html" class="stretched-link text-white">About Me</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
-                    <h3 class="mb-0">Photographic Archive</h3>
-                    <div class="mb-1 text-muted">Sep 22th</div>
-                    <p class="card-text mb-auto">Photography has been apart of my life and has opened up many doors, Here are some of the images I've captured over my lifetime</p>
-                    <a href="flickarchive.html" class="stretched-link" style="color:white">Photographic Archive</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+        <!-- Blog Section -->
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Blog</h3>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">A Greek Column in Blender, Tips to Get You Started, and Why I Love Blender So Much</h2>
+                    <p class="blog-post-meta">Sep 22, 2021 by <a href="blendertutorial.html">Read Here</a></p>
+                    <p>The Japanese Maneki-neko is a figurine often believed to bring good luck to the owner.</p>
+                    <hr>
+                    <h2 class="blog-post-title">Fixing the Japanese Maneki-neko (MoneyCat)</h2>
+                    <p class="blog-post-meta">Sep 18, 2021 by <a href="moneyCat.html">Read Here</a></p>
+                    <p>The Japanese Maneki-neko is a figurine often believed to bring good luck to the owner.</p>
+                    <hr>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">Random Quotes by Me</h4>
+                        <p class="mb-0" id="randomQuote">Life is balance and life is change!</p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="fst-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://github.com/timlefkowitz">GitHub</a></li>
+                            <li><a href="https://flickr.com/photos/someoneshootingblind">Flickr</a></li>
+                            <li><a href="https://www.linkedin.com/in/timothy-lefkowitz">LinkedIn</a></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="blog-footer text-center py-3">
+        <p><a href="#top">Back to top</a></p>
+    </footer>
 
-        <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-
-                <div class="col p-4 d-flex flex-column position-static" style="background-color:rgba(89,89,89,0.3);">
-                    <!--                    <strong class="d-inline-block mb-2 text-primary">Social Media Project</strong>-->
-                    <h3 class="mb-0">About</h3>
-                    <div class="mb-1 text-muted">Sep 22th</div>
-                    <p class="card-text mb-auto">About me, How to contact me and my resume</p>
-                    <a href="aboutme.html" class="stretched-link" style="color:white">about me</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <!--                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row g-5">
-        <div class="col-md-8">
-            <h3 class="pb-4 mb-4 fst-italic border-bottom">
-                From the Blog
-            </h3>
-
-            <article class="blog-post">
-                <h2 class="blog-post-title">A Greek Column in Blender, Tips to get you started and Why I love Blender so much</h2>
-                <p class="blog-post-meta">Sep 22, 2021 by <a href="blendertutorial.html" style="color: black">Read Here</a></p>
-                <p>The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.<hr>
-
-                <h2 class="blog-post-title">Fixing the Japenses Maneki-neko (MoneyCat)</h2>
-                <p class="blog-post-meta">Sep 18, 2021 by <a href="moneyCat.html" style="color: black">Read Here</a></p>
-                <p>The Japenses Maneki-neko is a figurine which is often believed to bring good luck to the owner.<hr>
-
-
-
-
-            </article>
-
-
-<!--            <nav class="blog-pagination" aria-label="Pagination">-->
-<!--                <a class="btn btn-outline-primary" href="#">Older</a>-->
-<!--                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>-->
-<!--            </nav>-->
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="position-sticky" style="top: 2rem;">
-                <div class="p-4 mb-3 bg-light rounded">
-                    <h4 class="fst-italic">random qoutes by me</h4>
-                    <p class="mb-0" id="randomQuote">Life is balance and life is change!</p>
-                </div>
-
-                <script>
-                    const Quote = [
-                        "Life is a balance, Life is Change",
-                        "Life Life",
-                        "A man that knows cannot learn",
-                        "Computer Science is cool"
-                    ]
-
-                    var up = document.getElementById('GFG_UP');
-                    var down = document.getElementById('GFG_DOWN');
-
-
-
-                    up.innerHTML = "Click on the button to check "
-                        + "the type of element.<br><br>" + arr;
-
-                    function QuoteGenerator() {
-                        down.innerHTML =
-                            Quote[Math.floor(Math.random() * Quote.length)];
-                    }
-                    QuoteGenerator()
-                    console.log(down);
-                </script>
-
-<!--                <div class="p-4">-->
-<!--                    <h4 class="fst-italic">Archives</h4>-->
-<!--                    <ol class="list-unstyled mb-0">-->
-<!--                        <li><a href="#">March 2021</a></li>-->
-<!--                        <li><a href="#">February 2021</a></li>-->
-<!--                        <li><a href="#">January 2021</a></li>-->
-<!--                        <li><a href="#">December 2020</a></li>-->
-<!--                        <li><a href="#">November 2020</a></li>-->
-<!--                        <li><a href="#">October 2020</a></li>-->
-<!--                        <li><a href="#">September 2020</a></li>-->
-<!--                        <li><a href="#">August 2020</a></li>-->
-<!--                        <li><a href="#">July 2020</a></li>-->
-<!--                        <li><a href="#">June 2020</a></li>-->
-<!--                        <li><a href="#">May 2020</a></li>-->
-<!--                        <li><a href="#">April 2020</a></li>-->
-<!--                    </ol>-->
-<!--                </div>-->
-
-                <div class="p-4">
-                    <h4 class="fst-italic">Elsewhere</h4>
-                    <ol class="list-unstyled">
-                        <li><a href="https://github.com/timlefkowitz" style="color: black">GitHub</a></li>
-                        <li><a href="https://flickr.com/photos/someoneshootingblind" style="color: black">Flickr</a></li>
-                        <li><a href="https://www.linkedin.com/in/timothy-lefkowitz" style="color: black">Linkedin</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</main>
-
-<footer class="blog-footer">
-    <p>
-        <a href="#top" style="color: black"><h6>Back to top</h6></a>
-    </p>
-</footer>
-
-
-
-
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    // SCRIPTS HERE
-    <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-
-
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<!--                ## clock-->
-<script>
-    function startTime(){
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('clock').innerText = h+":"+m+":"+s;
-        setTimeout(startTime,1000);
-    }
-    startTime();
-    function checkTime(i){
-        if(i < 10) {i = "0" + i}; //add zero in front of numbers < 10
-        return i;
-    }
-
-
-</script>
-
-</script>
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- External JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>
