@@ -14,8 +14,107 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="/styles.css">
+    <!-- Embedded CSS -->
+    <style>
+        /* General Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: #333;
+            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(to left, #00AAFF, #00FF6C);
+            padding-top: 70px; /* Prevent content overlap with fixed navbar */
+        }
+
+        /* Avatar */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* Card Styles */
+        .bg-card {
+            background-color: rgba(89, 89, 89, 0.3);
+            border-radius: 0.25rem;
+            box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Navbar */
+        .navbar {
+            z-index: 1000; /* Ensure navbar stays above content */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #dcdcdc;
+            font-family: Verdana;
+            padding: 1em;
+        }
+
+        nav a:hover {
+            background: #000;
+            color: #00b1ae;
+        }
+
+        nav ul li:nth-child(4) {
+            margin-left: auto;
+        }
+
+        /* Dropdown */
+        .dropdown-item {
+            background-color: #646161;
+        }
+
+        .dropdown-item:hover {
+            background-color: #00b1ae;
+        }
+
+        /* Links */
+        a:link {
+            color: #dcdcdc;
+        }
+
+        a:visited {
+            color: #00b1ae;
+        }
+
+        a:hover {
+            color: #00b1ae;
+        }
+
+        a:active {
+            color: #dcdcdc;
+        }
+
+        /* Images */
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        /* Link Styles for Cards */
+        a.text-white {
+            color: #dcdcdc;
+        }
+
+        a.text-white:hover {
+            color: #00b1ae;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -90,7 +189,7 @@
             <h3 class="text-muted">Professional Experience</h3>
         </section>
         <div class="row mb-4">
-            <div class="col p-4 d-flex flex-column position-static bg-card">
+            <div class="col p-4 d-flex flex-column bg-card">
                 <h3 class="mb-0">United States Postal Service</h3>
                 <div class="mb-1 text-muted">March 2022</div>
                 <p class="card-text mb-auto">
@@ -99,7 +198,7 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div class="col p-4 d-flex flex-column position-static bg-card">
+            <div class="col p-4 d-flex flex-column bg-card">
                 <h3 class="mb-0">Medicare & Medicaid Services</h3>
                 <div class="mb-1 text-muted">October 2023</div>
                 <p class="card-text mb-auto">
@@ -112,8 +211,6 @@
         <section class="text-center my-5">
             <h3 class="text-muted">Personal Projects</h3>
         </section>
-
-
         <div class="row mb-4">
             <div class="col p-4 d-flex flex-column bg-card">
                 <h3 class="mb-0">Trainer's Corner - Pokemon TCG</h3>
@@ -124,8 +221,6 @@
                 <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="text-white text-decoration-none">Check out the code here</a>
             </div>
         </div>
-
-
         <div class="row mb-4">
             <div class="col p-4 d-flex flex-column bg-card">
                 <h3 class="mb-0">Provence</h3>
@@ -136,38 +231,32 @@
                 <a href="https://github.com/timlefkowitz/Trainer-s-Corner" class="text-white text-decoration-none">Check out the code here</a>
             </div>
         </div>
-
-        
-<div class="row mb-4">
-    <div class="col p-4 d-flex flex-column bg-card position-relative">
-        <h3 class="mb-0">Photons - A Social Media Platform</h3>
-        <div class="mb-1 text-muted">Aug 20th</div>
-        <p class="card-text mb-auto">
-            This platform was built on Java using Spring Boot, jQuery, JavaScript, MySQL, Thymeleaf, and more. Users can post, create, and join groups, and have a feed. Each post has a hashed string, creating a unique key.
-        </p>
-        <a href="https://github.com/timlefkowitz/photonlabs" class="stretched-link text-white text-decoration-none">Check out the code here</a>
-    </div>
-</div>                               
+        <div class="row mb-4">
+            <div class="col p-4 d-flex flex-column bg-card">
+                <h3 class="mb-0">Photons - A Social Media Platform</h3>
+                <div class="mb-1 text-muted">Aug 20th</div>
+                <p class="card-text mb-auto">
+                    This platform was built on Java using Spring Boot, jQuery, JavaScript, MySQL, Thymeleaf, and more. Users can post, create, and join groups, and have a feed. Each post has a hashed string, creating a unique key.
+                </p>
+                <a href="https://github.com/timlefkowitz/photonlabs" class="text-white text-decoration-none">Check out the code here</a>
+            </div>
+        </div>
 
         <!-- Other Sections -->
         <section class="text-center my-5">
             <h3 class="text-muted">Others</h3>
         </section>
-
-
+        <div class="row g-4">
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 bg-card">
                     <div class="col p-4 d-flex flex-column">
                         <h3 class="mb-0">Game Design</h3>
-                    ���
                         <div class="mb-1 text-muted">Sep 22th</div>
                         <p class="card-text mb-auto">Game Design is one of my favorite pastimes. Here is a collection of assets I've created.</p>
                         <a href="3d.html" class="text-white text-decoration-none">Game Design</a>
                     </div>
                 </div>
             </div>
-
-
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 bg-card">
                     <div class="col p-4 d-flex flex-column">
@@ -178,8 +267,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 bg-card">
                     <div class="col p-4 d-flex flex-column">
@@ -190,6 +277,7 @@
                     </div>
                 </div>
             </div>
+        </div>
 
         <!-- Blog Section -->
         <div class="row g-5">
@@ -232,7 +320,41 @@
 
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- External JavaScript -->
-    <script src="scripts.js"></script>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // Clock
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerText = `${h}:${m}:${s}`;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            return i < 10 ? `0${i}` : i;
+        }
+
+        startTime();
+
+        // Random Quote Generator
+        const quotes = [
+            "Life is a balance, Life is Change",
+            "Life Life",
+            "A man that knows cannot learn",
+            "Computer Science is cool"
+        ];
+
+        function displayRandomQuote() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('randomQuote').innerText = randomQuote;
+        }
+
+        displayRandomQuote();
+    </script>
 </body>
 </html>
