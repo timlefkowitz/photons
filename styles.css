@@ -1,38 +1,83 @@
-ring: 20px;
-width: 70%;
-background-color: #f1f1f1;
-height: 300px; /* only for demonstration, should be removed */
+/* General Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-/* Clear floats after the columns */
-section::after {
-    content: "";
-    display: table;
-    clear: both;
+body {
+    margin: 0;
+    color: #333;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to left, #00AAFF, #00FF6C);
 }
 
-/* Style the footer */
-footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
+/* Avatar */
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-    nav, article {
-        width: 100%;
-        height: auto;
-    }
+/* Card Styles */
+.bg-card {
+    background-color: rgba(89, 89, 89, 0.3);
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
-fixed-top {
-    background: darkgray;
-    max-height: 25%;
+/* Navbar */
+nav a {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-family: Verdana;
+    padding: 1em;
 }
 
-fixed-bottom {
-    background: darkgray;
-    max-height:25%
+nav a:hover {
+    background: #000;
+    color: #00b1ae;
+}
+
+nav ul li:nth-child(4) {
+    margin-left: auto;
+}
+
+/* Dropdown */
+.dropdown-item {
+    background-color: #646161;
+}
+
+.dropdown-item:hover {
+    background-color: #00b1ae;
+}
+
+/* Links */
+a:link {
+    color: #dcdcdc;
+}
+
+a:visited {
+    color: #00b1ae;
+}
+
+a:hover {
+    color: #00b1ae;
+}
+
+a:active {
+    color: #dcdcdc;
+}
+
+/* Images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
